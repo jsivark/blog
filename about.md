@@ -1,5 +1,3 @@
-# About Me
-
 Hi there! I'm a **Research Analyst** at **Zoho Corporation Pvt Ltd** working on **AI and Machine Learning**. Since joining in January 2022, I’ve been into research, reading papers, and slowly getting into building models. 
 
 ### My Interests
