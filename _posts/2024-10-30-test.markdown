@@ -48,16 +48,16 @@ The action-value function gives the expected reward of taking action \( a \) in 
 ### The Bellman Equation
 
 Value functions satisfy a fundamental recursive relationship called the **Bellman equation**. For the state-value function, the Bellman equation is:
-
-\[
+\
 V(s) = \sum_{a} \pi(a | s) \sum_{s'} p(s' | s, a) \left[ r + \gamma V(s') \right]
-\]
+\
+'''
 
 For the action-value function, the Bellman equation is:
 
-\[
+\
 Q(s, a) = \sum_{s'} p(s' | s, a) \left[ r + \gamma \sum_{a'} \pi(a' | s') Q(s', a') \right]
-\]
+\
 
 These equations allow us to compute the values of states and actions recursively by breaking down future rewards in terms of immediate rewards and the values of subsequent states.
 
