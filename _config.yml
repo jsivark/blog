@@ -7,7 +7,7 @@ url:
 twitter_username: meredilettante
 github_username:  quantum-sage
 
-avatar: '/home/sivarama-12850/blog/assets/minions1.png'
+avatar: 'assets/minions1.png'
 
 # Build settings
 markdown: kramdown
