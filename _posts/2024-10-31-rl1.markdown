@@ -1,0 +1,30 @@
+---
+layout: post
+comments: true
+title:  "Deep Reinforcement Learning: Pong from Pixels"
+excerpt: "I'll discuss the core ideas, pros and cons of policy gradients, a standard approach to the rapidly growing and exciting area of deep reinforcement learning. As a running example we'll learn to play ATARI 2600 Pong from raw pixels."
+date:   2016-05-31 11:00:00
+mathjax: true
+---
+
+<!-- 
+<svg width="800" height="200">
+	<rect width="800" height="200" style="fill:rgb(98,51,20)" />
+	<rect width="20" height="50" x="20" y="100" style="fill:rgb(189,106,53)" />
+	<rect width="20" height="50" x="760" y="30" style="fill:rgb(77,175,75)" />
+	<rect width="10" height="10" x="400" y="60" style="fill:rgb(225,229,224)" />
+</svg>
+ -->
+
+
+$$
+\begin{align}
+\nabla_{\theta} E_x[f(x)] &= \nabla_{\theta} \sum_x p(x) f(x) & \text{definition of expectation} \\
+& = \sum_x \nabla_{\theta} p(x) f(x) & \text{swap sum and gradient} \\
+& = \sum_x p(x) \frac{\nabla_{\theta} p(x)}{p(x)} f(x) & \text{both multiply and divide by } p(x) \\
+& = \sum_x p(x) \nabla_{\theta} \log p(x) f(x) & \text{use the fact that } \nabla_{\theta} \log(z) = \frac{1}{z} \nabla_{\theta} z \\
+& = E_x[f(x) \nabla_{\theta} \log p(x) ] & \text{definition of expectation}
+\end{align}
+$$
+
+To put this in English, we have some distribution \\(p(x;\theta)\\) (I used shorthand \\(p(x)\\) to reduce clutter) that we can sample from (e.g. this could be a gaussian). For each sample we can also evaluate the score function \\(f\\) which takes the sample and gives us some scalar-valued score. This equation is telling us how we should shift the distribution (through its parameters \\(\theta\\)) if we wanted its samples to achieve higher scores, as judged by \\(f\\). In particular, it says that look: draw some samples \\(x\\), evaluate their scores \\(f(x)\\), and for each \\(x\\) also evaluate the second term \\( \nabla\_{\theta} \log p(x;\theta) \\). What is this second term? It's a vector - the gradient that's giving us the direction in the parameter space that would lead to increase of the probability assigned to an \\(x\\). In other words if we were to nudge \\(\theta\\) in the direction of \\( \nabla\_{\theta} \log p(x;\theta) \\) we would see the new probability assigned to some \\(x\\) slightly increase. If you look back at the formula, it's telling us that we should take this direction and multiply onto it the scalar-valued score \\(f(x)\\). This will make it so that samples that have a higher score will "tug" on the probability density stronger than the samples that have lower score, so if we were to do an update based on several samples from \\(p\\) the probability density would shift around in the direction of higher scores, making highly-scoring samples more likely.
