@@ -7,7 +7,7 @@ url:
 twitter_username: meredilettante
 github_username:  quantum-sage
 
-avatar: assets/rssicon.svg
+avatar: https://raw.githubusercontent.com/quantum-sage/blog/master/assets/rssicon.svg
 
 # Build settings
 markdown: kramdown
