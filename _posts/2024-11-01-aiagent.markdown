@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "AI Agents Papers & Resources"
 excerpt: "I'll Compile papers and resources related to improving agentic abilities of LLMs in  planning and reasoning"
-date:   2024-11-01 00:00:00
+date:   2024-11-01 11:00:00
 mathjax: true
 ---
 
@@ -17,7 +17,6 @@ mathjax: true
  -->
 I have tried to classify them into different areas to the best of my knowledge, but I don't think they are precise. Goal is to improve model performance to get O1 like model, and achieve improved reasoning and planning to be used as agents. 
 ### Papers
-
 **MCTS & Inference time search**
 
 - [ ] [Building math agents](https://www.arxiv.org/pdf/2409.02392)
