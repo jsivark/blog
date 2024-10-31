@@ -16,4 +16,4 @@ mathjax: true
 </svg>
  -->
 
-This is a long overdue blog post on Reinforcement Learning (RL). RL is hot! You may have noticed that computers can now automatically [learn to play ATARI games](http://www.nature.com/nature/journal/v518/n7540/abs/nature14236.html) (from raw game pixels!)
+- [ ] [Self-Rewarding Language Models](https://arxiv.org/pdf/2401.10020)
