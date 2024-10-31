@@ -17,8 +17,8 @@ mathjax: true
  -->
  This is a compilation of resources and papers focused on improving LLM performance, reasoning ability, and planning skills. It covers the use of reinforcement learning (RL) and examines how increasing test-time compute impacts their agentic capabilities.
  
- ### Papers
- 
+### Papers
+
  **MCTS & Inference time search**
 
 - [ ] [Building math agents](https://www.arxiv.org/pdf/2409.02392)
