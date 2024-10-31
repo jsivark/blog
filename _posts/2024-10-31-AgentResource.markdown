@@ -15,37 +15,4 @@ mathjax: true
 	<rect width="10" height="10" x="400" y="60" style="fill:rgb(225,229,224)" />
 </svg>
  -->
- This is a compilation of resources and papers focused on improving LLM performance, reasoning ability, and planning skills. It covers the use of reinforcement learning (RL) and examines how increasing test-time compute impacts their agentic capabilities.
-### Papers 
-**MCTS & Inference time search**
-
-- [ ] [Building math agents](https://www.arxiv.org/pdf/2409.02392)
-- [ ] [Strategist](https://arxiv.org/pdf/2408.10635)
-- [ ] [Scaling llm test time compute optimally](https://arxiv.org/pdf/2408.03314)
-- [ ] [alpha go cost](https://www.yuzeh.com/data/agz-cost.html)
-- [ ] [chain of preference optimisation](https://arxiv.org/pdf/2406.09136)
-- [ ] [mcts boosting](https://arxiv.org/pdf/2405.00451)
-- [ ] [Self-Rewarding Language Models](https://arxiv.org/pdf/2401.10020)
-
-**Agent & self reward**
-
-- [ ] [Generative agents](https://arxiv.org/abs/2304.03442)
-- [ ] [Reflexion](https://arxiv.org/abs/2303.1136)
-- [ ] [Self-Refine](https://arxiv.org/abs/2303.17651)
-- [ ] [Retroformer](https://arxiv.org/pdf/2308.02151)
-- [ ] [constitutional ai](https://arxiv.org/pdf/2212.08073)
-
-**RL**
-
-- [ ] [DPO](https://arxiv.org/pdf/2305.18290)
-- [ ] [Digirl](https://arxiv.org/abs/2406.11896)
-- [ ] [archer](https://arxiv.org/abs/2402.19446)
-
-**Products and Implementation**
-
-- [ ] [agentq](https://arxiv.org/pdf/2408.07199)
-- [ ] [reasoning&planning](https://arxiv.org/pdf/2305.14992)
-- [ ] [rex](https://arxiv.org/pdf/2307.08962)
-- [ ] [expel](https://arxiv.org/pdf/2308.10144)
-- [ ] [automanual](https://arxiv.org/pdf/2405.16247)
-- [ ] [web gpt](https://arxiv.org/abs/2112.09332)
+ 
