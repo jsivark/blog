@@ -10,6 +10,7 @@ Hi there! I'm a **Research Analyst** at **Zoho Corporation Pvt Ltd** working on 
 I have a strong passion for the intersection of **biology and artificial intelligence**, My current focus is on **LLMs** and **LLM agents**. My goal is to create models that enhance core capabilities like **memory, planning, reasoning, and tool use** at work
 
 ### Skills and Goals
+**Skills:**  Python & C; HTML & CSS
 I'm trying to learn **hardware, software, and operations** as well as some basic **physics, math, and biology**. My aim is to move seamlessly across these fields, conducting research and building practical applications.
 
 - **Hackathons:** (Oct '24 - Dec '24) Currently working on the UC Berkeley AI Agents Hackathon (Fundamentals track).
