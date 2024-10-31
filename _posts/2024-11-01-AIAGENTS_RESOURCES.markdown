@@ -16,5 +16,7 @@ mathjax: true
 </svg>
  -->
 
+ The idea is to all resources with respect to this topic in one place.
+
  - [ ] [Building math agents](https://www.arxiv.org/pdf/2409.02392)
  
