@@ -1,8 +1,8 @@
 ---
 layout: post
 comments: true
-title:  "Deep Reinforcement Learning: Pong from Pixels"
-excerpt: "I'll discuss the core ideas, pros and cons of policy gradients, a standard approach to the rapidly growing and exciting area of deep reinforcement learning. As a running example we'll learn to play ATARI 2600 Pong from raw pixels."
+title:  "AI Agents Papers & Resources"
+excerpt: "Compilation of papers related to reasoning, planning and agentic abilities of LLMs"
 date:   2016-05-31 11:00:00
 mathjax: true
 ---
@@ -15,6 +15,8 @@ mathjax: true
 	<rect width="10" height="10" x="400" y="60" style="fill:rgb(225,229,224)" />
 </svg>
  -->
+ This is a compilation of resources and papers focused on improving LLM performance, reasoning ability, and planning skills. It covers the use of reinforcement learning (RL) and examines how increasing test-time compute impacts their agentic capabilities.
+ ### Papers
  **MCTS & Inference time search**
 
 - [ ] [Building math agents](https://www.arxiv.org/pdf/2409.02392)
