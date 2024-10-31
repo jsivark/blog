@@ -2,12 +2,13 @@
 title: Siva's blog
 email: 
 description: "My Experiments"
+url: "https://quantum-sage.github.io"
 baseurl: "/blog"
-url: 
 twitter_username: meredilettante
 github_username:  quantum-sage
 
 avatar: 'assets/minions1.png'
+future: true
 
 # Build settings
 markdown: kramdown
