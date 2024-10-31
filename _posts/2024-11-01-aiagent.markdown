@@ -51,5 +51,4 @@ I have tried to classify them into different areas to the best of my knowledge, 
 - [ ] [automanual](https://arxiv.org/pdf/2405.16247)
 - [ ] [web gpt](https://arxiv.org/abs/2112.09332)
 
-**Mo**
 
