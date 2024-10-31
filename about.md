@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 includelink: true
 ---
-Hi there! I'm a **Research Analyst** at **Zoho Corporation Pvt Ltd** working on **AI and Machine Learning**. Since joining in January 2022, I’ve been into research, reading papers, and slowly getting into building models. 
+Hi there! I'm a **Research Analyst** at **Zoho Corporation Pvt Ltd** working on **AI and Machine Learning**. Since joining in January 2022, I’ve been into research, reading papers, and slowly getting into building models. I aim to write primarily on science, math and with occasional posts on philosophy. 
 
 ### My Interests
 I have a strong passion for the intersection of **biology and artificial intelligence**, My current focus is on **LLMs** and **LLM agents**. My goal is to create models that enhance core capabilities like **memory, planning, reasoning, and tool use** at work
