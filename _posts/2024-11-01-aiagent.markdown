@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "AI Agents Papers & Resources"
 excerpt: "I'll Compile papers and resources related to improving agentic abilities of LLMs in  planning and reasoning"
-date:   2024-10-01 11:00:00
+date:   2024-11-01 00:00:00
 mathjax: true
 ---
 
@@ -15,8 +15,9 @@ mathjax: true
 	<rect width="10" height="10" x="400" y="60" style="fill:rgb(225,229,224)" />
 </svg>
  -->
-I have tried to classify them into different areas to the best of my knowledge, but I don't think they are precise. 
+I have tried to classify them into different areas to the best of my knowledge, but I don't think they are precise. Goal is to improve model performance to get O1 like model, and achieve improved reasoning and planning to be used as agents. 
 ### Papers
+
 **MCTS & Inference time search**
 
 - [ ] [Building math agents](https://www.arxiv.org/pdf/2409.02392)
@@ -28,7 +29,7 @@ I have tried to classify them into different areas to the best of my knowledge, 
 - [ ] [Self-Rewarding Language Models](https://arxiv.org/pdf/2401.10020)
 
 **Agent & self reward**
-
+- [ ] [Self-Consistency](https://arxiv.org/pdf/2203.11171)
 - [ ] [Generative agents](https://arxiv.org/abs/2304.03442)
 - [ ] [Reflexion](https://arxiv.org/abs/2303.1136)
 - [ ] [Self-Refine](https://arxiv.org/abs/2303.17651)
@@ -49,4 +50,6 @@ I have tried to classify them into different areas to the best of my knowledge, 
 - [ ] [expel](https://arxiv.org/pdf/2308.10144)
 - [ ] [automanual](https://arxiv.org/pdf/2405.16247)
 - [ ] [web gpt](https://arxiv.org/abs/2112.09332)
+
+**Mo**
 
