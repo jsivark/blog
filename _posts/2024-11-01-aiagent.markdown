@@ -1,6 +1,5 @@
-### Papers 
-**MCTS & Inference time search**
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <!-- 
 <svg width="800" height="200">
@@ -75,3 +74,5 @@
 - [ ] [expel](https://arxiv.org/pdf/2308.10144)
 - [ ] [automanual](https://arxiv.org/pdf/2405.16247)
 - [ ] [web gpt](https://arxiv.org/abs/2112.09332)
+=======
+>>>>>>> 8e1ecfad396fcea0f84f000adafbbad9e6e5cdd9
