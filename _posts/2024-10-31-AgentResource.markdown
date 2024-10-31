@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "AI Agents Papers & Resources"
 excerpt: "Compilation of papers related to reasoning, planning, and agentic abilities of LLMs"
-date:   2024-10-31 11:00:00
+date:   2016-05-31 11:00:00
 mathjax: true
 ---
 
