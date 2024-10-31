@@ -12,7 +12,7 @@ I have a strong passion for the intersection of **biology and artificial intelli
 ### Skills and Goals
 I'm trying to learn **hardware, software, and operations** as well as some basic **physics, math, and biology**. My aim is to move seamlessly across these fields, conducting research and building practical applications.
 
-- **Hackathons** Currently working on the UC Berkeley AI Agents Hackathon (Fundamentals track).
+- **Hackathons:** Currently working on the UC Berkeley AI Agents Hackathon (Fundamentals track).
 
 ### Beyond Work
 In my downtime, you might find me playing(trying to play!) **chess**, **reading books**, or catching a good **cricket** match.
