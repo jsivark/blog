@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "AI Agents Papers & Resources"
-excerpt: "I'll Compile Agents planning and reasoning related resources here"
+excerpt: "I'll Compile papers and resources related to improving agentic abilities of LLMs in  planning and reasoning"
 date:   2024-10-01 11:00:00
 mathjax: true
 ---
@@ -15,5 +15,12 @@ mathjax: true
 	<rect width="10" height="10" x="400" y="60" style="fill:rgb(225,229,224)" />
 </svg>
  -->
-
-- [ ] [Self-Rewarding Language Models](https://arxiv.org/pdf/2401.10020)
+### Papers
+**MCTS & Inference time search** 
+- [ ]  [Building math agents](https://www.arxiv.org/pdf/2409.02392)
+- [ ]  [Strategist](https://arxiv.org/pdf/2408.10635)
+- [ ]  [Scaling llm test time compute optimally](https://arxiv.org/pdf/2408.03314)
+- [ ]  [alpha go cost](https://www.yuzeh.com/data/agz-cost.html)
+- [ ]  [chain of preference optimisation](https://arxiv.org/pdf/2406.09136)
+- [ ]  [mcts boosting](https://arxiv.org/pdf/2405.00451)
+- [ ]  [Self-Rewarding Language Models](https://arxiv.org/pdf/2401.10020)
