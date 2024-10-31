@@ -17,7 +17,8 @@ mathjax: true
  -->
 I have tried to classify them into different areas to the best of my knowledge, but I don't think they are precise. 
 ### Papers
-**MCTS & Inference time search** 
+**MCTS & Inference time search**
+
 - [ ] [Building math agents](https://www.arxiv.org/pdf/2409.02392)
 - [ ] [Strategist](https://arxiv.org/pdf/2408.10635)
 - [ ] [Scaling llm test time compute optimally](https://arxiv.org/pdf/2408.03314)
@@ -25,20 +26,27 @@ I have tried to classify them into different areas to the best of my knowledge, 
 - [ ] [chain of preference optimisation](https://arxiv.org/pdf/2406.09136)
 - [ ] [mcts boosting](https://arxiv.org/pdf/2405.00451)
 - [ ] [Self-Rewarding Language Models](https://arxiv.org/pdf/2401.10020)
-**Agent & self reward** 
+
+**Agent & self reward**
+
 - [ ] [Generative agents](https://arxiv.org/abs/2304.03442)
 - [ ] [Reflexion](https://arxiv.org/abs/2303.1136)
 - [ ] [Self-Refine](https://arxiv.org/abs/2303.17651)
 - [ ] [Retroformer](https://arxiv.org/pdf/2308.02151)
 - [ ] [constitutional ai](https://arxiv.org/pdf/2212.08073)
+
 **RL**
+
 - [ ] [DPO](https://arxiv.org/pdf/2305.18290)
 - [ ] [Digirl](https://arxiv.org/abs/2406.11896)
 - [ ] [archer](https://arxiv.org/abs/2402.19446)
+
 **Products and Implementation**
+
 - [ ] [agentq](https://arxiv.org/pdf/2408.07199)
 - [ ] [reasoning&planning](https://arxiv.org/pdf/2305.14992)
 - [ ] [rex](https://arxiv.org/pdf/2307.08962)
 - [ ] [expel](https://arxiv.org/pdf/2308.10144)
 - [ ] [automanual](https://arxiv.org/pdf/2405.16247)
 - [ ] [web gpt](https://arxiv.org/abs/2112.09332)
+
