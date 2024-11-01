@@ -4,7 +4,7 @@
       <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
         <img src="{{ "/assets/minions.png" | prepend: site.baseurl }}" width="40">
       </a>
-      <button id="theme-toggle" aria-label="Toggle night mode">🌙</button>
+  
     </div>
 
     <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
@@ -32,22 +32,4 @@
   </div>
 </header>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.getElementById("theme-toggle");
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-    // Apply preferred theme on page load
-    if (localStorage.getItem("theme") === "dark" || (!localStorage.getItem("theme") && prefersDarkScheme.matches)) {
-      document.body.classList.add("dark-mode");
-    }
-
-    toggleButton.addEventListener("click", () => {
-      // Toggle dark mode class on the body
-      document.body.classList.toggle("dark-mode");
-      
-      // Save preference to local storage
-      localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
-    });
-  });
-</script>

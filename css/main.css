@@ -33,45 +33,6 @@ a:visited { color: #205caa; }
   margin: 0 auto;
   zoom: 1;
 }
-/* Light theme (default) */
-body {
-  --bg-color: #ffffff;
-  --text-color: #333333;
-  --link-color: #0066cc;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-}
-
-a {
-  color: var(--link-color);
-}
-
-/* Position the button in the top-right corner */
-#theme-toggle {
-  cursor: pointer;
-  font-size: 1.2em;
-  background: none;
-  border: none;
-  margin: 10px;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 1000; /* Ensure it’s on top of other content */
-}
-
-/* Basic dark mode styles */
-body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-}
-
-/* Additional elements (header, footer, etc.) */
-header.dark-mode, footer.dark-mode, .main-content.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-}
-
-
 /* Layout Styles */
 /* ----------------------------------------------------------*/
 
