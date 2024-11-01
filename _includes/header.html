@@ -32,20 +32,21 @@
   </div>
 </header>
 
-<!-- JavaScript for Theme Toggle -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const toggleButton = document.getElementById("theme-toggle");
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-    // Apply the preferred theme on page load
+    // Apply preferred theme on page load
     if (localStorage.getItem("theme") === "dark" || (!localStorage.getItem("theme") && prefersDarkScheme.matches)) {
       document.body.classList.add("dark-mode");
     }
 
     toggleButton.addEventListener("click", () => {
+      // Toggle dark mode class on the body
       document.body.classList.toggle("dark-mode");
-      // Save the user's preference
+      
+      // Save preference to local storage
       localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
     });
   });
