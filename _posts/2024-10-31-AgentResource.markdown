@@ -16,7 +16,7 @@ mathjax: true
 </svg>
  -->
 
-This post is a curated collection of resources and papers related to improving LLM performance, reasoning, and planning abilities. It includes the use of reinforcement learning (RL) and explores how increasing test-time compute can enhance agentic capabilities.
+This post is a curated collection of resources and papers related to improving LLM performance, reasoning, and planning abilities. It includes the use of reinforcement learning (RL) and explores how increasing test-time compute can enhance agentic capabilities. I have tried to categorize them, but it's not precise. 
 
 ### Papers
 
