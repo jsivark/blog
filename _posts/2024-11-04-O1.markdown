@@ -6,4 +6,4 @@ excerpt: "Part 1 of the series on understanding and reimplemeting O1, This blog 
 date:   2024-10-31 11:00:00
 mathjax: true
 ---
-These papers are mainly from [srush's](https://github.com/srush/awesome-o1) blog,Thanks for his compilation and few will be something I find interesting.
+Papers for these posts are mainly from [srush's](https://github.com/srush/awesome-o1) repo,Thanks for his compilation and few will be something I find interesting.
