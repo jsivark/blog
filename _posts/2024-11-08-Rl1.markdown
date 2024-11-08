@@ -24,7 +24,7 @@ Examples:
 - play many different atari game better than humans. 
 
 Reinforcement learning problem:
-$r_{t}$ - reward, a scalar feedback signal. how well a job is done at step $t$, the agent's goal will be to maximise the overall reward. 
+\\(r_t)\\ - reward, a scalar feedback signal. how well a job is done at step $t$, the agent's goal will be to maximise the overall reward. 
 This take is bit controversial, because people may not always agree to this premise, the all task can be reward oriented. 
 Reinforcement learning is based on Reward Hypothesis:
 
@@ -32,8 +32,8 @@ Reinforcement learning is based on Reward Hypothesis:
 
 Example rewards;
  - Fly stunt manoevers in a helicopter
-	 -  $+ve$ reward for the following desired trajectory. 
-	 - $-ve$ reward for crashing.
+	 -  \\(+ve\\) reward for the following desired trajectory. 
+	 - \\(-ve\\) reward for crashing.
  we can do Output Reward Model(ORM), $i.e$ reward based on the final outcome alone, or Process Reward Model(PRM). 
 
 	Goal: select actions to maximise the total future rewards.
