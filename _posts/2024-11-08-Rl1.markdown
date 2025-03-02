@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "David silver RL notes 1"
-excerpt: "Part 1 of the series on understanding and reimplemeting O1, This blog I discuss and summarize the papers that might have been the backbone of O1 implementation."
+excerpt: "David silver Lecture 1"
 date:   2024-10-31 11:00:00
 mathjax: true
 ---
