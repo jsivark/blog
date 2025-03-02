@@ -36,5 +36,7 @@ Example rewards;
 	 - \\(-ve\\) reward for crashing.
  we can do Output Reward Model(ORM), \\(i.e\\) reward based on the final outcome alone, or Process Reward Model(PRM). 
 
-	Goal: select actions to maximise the total future rewards.
+> Goal: select actions to maximise the total future rewards.
+
+
 
