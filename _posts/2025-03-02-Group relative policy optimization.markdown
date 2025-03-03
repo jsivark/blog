@@ -16,9 +16,8 @@ Policy gradient
 PPO
 GRPO
  - Intro about paper deepseek v3 
-<div class="imgcap">
-<img src="{{ site.baseurl }}/assets/deepseek_architecture.jpeg">
-<div class="thecap"> <b>credits:@SIrrahChan</b></div>
-</div>
+
+![deepseek training architecture]({{ site.baseurl }}/assets/deepseek_architecture.jpeg)
+
     
 
