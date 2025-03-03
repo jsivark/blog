@@ -17,7 +17,7 @@ PPO
 GRPO
  - Intro about paper deepseek v3 
 <div class="imgcap">
-<img src="/assets/deepseek_architecture.jpeg">
+<img src="{{ site.baseurl }}/assets/deepseek_architecture.jpeg">
 <div class="thecap"> <b>credits:@SIrrahChan</b></div>
 </div>
     
