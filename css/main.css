@@ -210,6 +210,14 @@ a:visited { color: #000; }
   letter-spacing: -1px;
 }
 
+.post-content {
+    text-align: center;
+}
+.post-content img {
+    display: block;
+    margin: 0 auto;
+}
+
 .post-content blockquote {
   border-left: 4px solid #e8e8e8;
   padding-left: 20px;
