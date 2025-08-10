@@ -12,7 +12,7 @@ mathjax: true
 }
 .post pre,
 .post code {
-    background-color: #000000;
+    background-color: #fcfcfc;
     font-size: 13px; /* make code smaller for this post... */
 }
 </style>
