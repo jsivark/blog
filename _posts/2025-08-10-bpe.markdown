@@ -33,7 +33,9 @@ Main theme is to iteratively merge frequent texts and give them an ID. The final
 >>>    print(f"{i} -> {decode}")
 ```
 
-<img src="/assets/bpe_output.png" width="100% />
+<div markdown="0">
+<img src="/assets/bpe_output.png" width="100%" />
+</div>
 
 So, BPE uses this initial vocabulary to develop further, you can ask what's the problem with byte array representation, answer to that is, every element or character is mapped to a number, essentially N characters will have N numbers. But language tends to have frequent patterns, certain set of characters appear more frequently, which deserves their own ID, essentially it'll reduce the length of the input, while increasing the size of vocabulary.
 
