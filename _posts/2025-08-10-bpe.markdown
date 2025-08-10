@@ -19,12 +19,12 @@ So, BPE uses this initial vocabulary to develop further, you can ask what's the 
 
 # 1. Find frequent pairs
     
-> Go over the text and find the most frequently occurring pair of characters.
+- Go over the text and find the most frequently occurring pair of characters.
 
 # 2. Merge and replace
 
-> Replace the pair with new ID. 
-> Build a lookup table.
+- Replace the pair with new ID. 
+- Build a lookup table.
 
 Repeat step 1 and 2, until no new pair can be found. Number of merges is a hyperparameter, for GPT-2, that's 50,257.
 
