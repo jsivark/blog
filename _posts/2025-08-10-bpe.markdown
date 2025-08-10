@@ -13,6 +13,16 @@ Main theme is to iteratively merge frequent texts and give them an ID. The final
 
 "In the beginning there was the word", just kidding, we have individual letters, numbers, and some "symbols", in 8 bit representation that's totally 256. 
 
+```python
+>>> import tiktoken
+
+>>> tokenizer = tiktoken.get_encoding("gpt2")
+
+>>> for i in range(10):
+>>>    decode = tokenizer.decode([i])
+>>>    print(f"{i} -> {decode}")
+```
+
 So, BPE uses this initial vocabulary to develop further, you can ask what's the problem with byte array representation, answer to that is, every element or character is mapped to a number, essentially N characters will have N numbers. But language tends to have frequent patterns, certain set of characters appear more frequently, which deserves their own ID, essentially it'll reduce the length of the input, while increasing the size of vocabulary.
 
 ### BPE algorithm steps:
