@@ -6,6 +6,16 @@ excerpt: "simple notes on bpe and implemantation"
 date:   2025-08-10 11:00:00
 mathjax: true
 ---
+<style>
+.post-header h1 {
+    font-size: 35px;
+}
+.post pre,
+.post code {
+    background-color: #fcfcfc;
+    font-size: 13px; /* make code smaller for this post... */
+}
+</style>
 
 This is a very short summary on Byte-Pair encoding, just how it works, not much on why it's that way. 
 
@@ -22,6 +32,8 @@ Main theme is to iteratively merge frequent texts and give them an ID. The final
 >>>    decode = tokenizer.decode([i])
 >>>    print(f"{i} -> {decode}")
 ```
+
+<img src="/home/sivarama-12850/github_projects/blog/assets/bpe_output.png" width="100% />
 
 So, BPE uses this initial vocabulary to develop further, you can ask what's the problem with byte array representation, answer to that is, every element or character is mapped to a number, essentially N characters will have N numbers. But language tends to have frequent patterns, certain set of characters appear more frequently, which deserves their own ID, essentially it'll reduce the length of the input, while increasing the size of vocabulary.
 
