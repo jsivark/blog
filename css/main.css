@@ -191,7 +191,7 @@ a:visited { color: #000; }
 .post-content h5,
 .post-content h6 {
   line-height: 1;
-  font-weight: 300;
+  font-weight: bold;
   margin: 40px 0 20px;
 }
 

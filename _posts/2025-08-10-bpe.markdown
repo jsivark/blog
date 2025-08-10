@@ -15,8 +15,16 @@ Main theme is to iteratively merge frequent texts and give them an ID. The final
 
 So, BPE uses this initial vocabulary to develop further, you can ask what's the problem with byte array representation, answer to that is, every element or character is mapped to a number, essentially N characters will have N numbers. But language tends to have frequent patterns, certain set of characters appear more frequently, which deserves their own ID, essentially it'll reduce the length of the input, while increasing the size of vocabulary.
 
-BPE algorithm steps:
+### BPE algorithm steps:
 
-1: Find frequent pairs
+# 1. Find frequent pairs
     
-2: Merge and replace. 
+> Go over the text and find the most frequently occurring pair of characters.
+
+# 2. Merge and replace
+
+> Replace the pair with new ID. 
+> Build a lookup table.
+
+Repeat step 1 and 2, until no new pair can be found. Number of merges is a hyperparameter, for GPT-2, that's 50,257.
+
