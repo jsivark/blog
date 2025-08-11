@@ -359,55 +359,46 @@ a:visited { color: #00AA77; } /* Slightly different green for visited links */
 /* ----------------------------------------------------------*/
 
 /* Theme Toggle Button */
-.theme-toggle {
+.site-nav .theme-toggle {
   background: none;
   border: none;
-  /* color: #00FF00; Green icon for dark mode - removing this to let SVG stroke/fill define color */
   cursor: pointer;
-  font-size: 18px; /* Make the button text/icon slightly smaller */
-  padding: 0 10px;
-  line-height: 1; /* Adjust line-height for better vertical alignment */
+  font-size: 0; /* Hide font-size affecting button if any */
+  padding: 0 5px; /* Reduce padding slightly */
+  line-height: 1; /* Align button baseline */
   float: right;
   outline: none;
-  vertical-align: middle; /* Align vertically with text */
+  vertical-align: middle; /* Crucial for aligning with text */
+  margin-left: 15px; /* Keep spacing consistent */
 }
 
-.theme-toggle svg {
-  width: 18px; /* Make the SVG icon smaller */
-  height: 18px; /* Make the SVG icon smaller */
-  vertical-align: middle;
-  stroke: #00FF00; /* Force green stroke for dark mode */
-  fill: none; /* Ensure no fill by default */
+.site-nav .theme-toggle svg {
+  width: 20px; /* Adjust size */
+  height: 20px; /* Adjust size */
+  vertical-align: middle; /* Ensure icon is centered within button */
+  stroke: #00FF00; /* Default dark mode stroke */
+  fill: none; /* No fill by default */
 }
 
-.theme-toggle .moon-icon {
-  stroke: #00FF00; /* Ensure moon is green in dark mode */
-  fill: none;
+.site-nav .theme-toggle .moon-icon {
+  display: inline-block; /* Show moon by default */
 }
 
-.theme-toggle .sun-icon {
-  stroke: #00FF00; /* Ensure sun is green in dark mode */
-  fill: none;
-  display: none; /* Hide sun icon by default (dark mode) */
+.site-nav .theme-toggle .sun-icon {
+  display: none; /* Hide sun by default */
 }
 
 /* Light Mode Styles */
-body.light-mode {
-  background-color: #fdfdfd; /* Light background */
-  color: #333; /* Dark text */
+body.light-mode .site-nav .theme-toggle svg {
+  stroke: #333; /* Light mode stroke */
 }
 
-body.light-mode .theme-toggle svg {
-  stroke: #333; /* Force dark stroke for light mode */
+body.light-mode .site-nav .theme-toggle .moon-icon {
+  display: none; /* Hide moon in light mode */
 }
 
-body.light-mode .theme-toggle .moon-icon {
-  display: none;
-}
-
-body.light-mode .theme-toggle .sun-icon {
-  stroke: #333; /* Ensure sun is dark in light mode */
-  display: inline-block;
+body.light-mode .site-nav .theme-toggle .sun-icon {
+  display: inline-block; /* Show sun in light mode */
 }
 
 body.light-mode a         { color: #0000FF; } /* Blue links */
