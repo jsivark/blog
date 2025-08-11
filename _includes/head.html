@@ -23,4 +23,28 @@
       ga('send', 'pageview');
     </script>
 
+    <script>
+      // Theme toggle JavaScript
+      const themeToggle = document.getElementById('theme-toggle');
+      const body = document.body;
+      const lightModeClass = 'light-mode';
+
+      // Load saved theme from localStorage
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === lightModeClass) {
+        body.classList.add(lightModeClass);
+      }
+
+      // Toggle theme on button click
+      themeToggle.addEventListener('click', () => {
+        if (body.classList.contains(lightModeClass)) {
+          body.classList.remove(lightModeClass);
+          localStorage.setItem('theme', 'dark-mode');
+        } else {
+          body.classList.add(lightModeClass);
+          localStorage.setItem('theme', lightModeClass);
+        }
+      });
+    </script>
+
 </head>
