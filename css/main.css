@@ -617,12 +617,13 @@ body.light-mode .highlight .il { color: #009999 } /* Literal.Number.Integer.Long
 
   .site-nav:hover .trigger { display: block; }
 
-  .site-nav .page-link {
-    display: block;
+  .site-nav .page-link,
+  .site-nav .theme-toggle {
+    display: inline-block;
     text-align: right;
     line-height: 1.25;
     padding: 5px 10px;
-    margin: 0;
+    margin: 0 5px;
   }
 
   .post-header h1 { font-size: 36px; }
