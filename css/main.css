@@ -66,10 +66,23 @@ a:visited { color: #00AA77; } /* Slightly different green for visited links */
 
 .site-nav .menu-icon { display: none; }
 
-.site-nav .page-link {
-  margin-left: 20px;
-  color: #00FFFF; /* Cyan navigation links */
-  letter-spacing: -.5px;
+.site-nav .trigger {
+  display: flex; /* CRITICAL: Use flexbox for alignment */
+  align-items: center; /* CRITICAL: Vertically center items */
+  justify-content: flex-end; /* CRITICAL: Push items to the right */
+  clear: both;
+  margin-bottom: 5px;
+}
+
+.site-nav:hover .trigger { display: block; }
+
+.site-nav .page-link,
+.site-nav .theme-toggle {
+  text-align: right; /* Still useful for mobile dropdown */
+  line-height: 56px; /* Maintain height, align with parent */
+  padding: 0; /* Remove any padding that might misalign */
+  margin-left: 20px; /* Adjust horizontal spacing between items as needed */
+  vertical-align: middle; /* Still good practice, though align-items handles most cases */
 }
 
 /* Site footer */
@@ -367,6 +380,7 @@ a:visited { color: #00AA77; } /* Slightly different green for visited links */
   padding: 0; /* No padding on button itself */
   line-height: 1; /* Reset line-height to let flex handle vertical alignment */
   outline: none;
+  margin-left: 20px; /* Consistent spacing, matches .page-link */
 }
 
 .site-nav .theme-toggle svg {
@@ -614,7 +628,7 @@ body.light-mode .highlight .il { color: #009999 } /* Literal.Number.Integer.Long
     /* display: inline-block; */ /* No longer needed with flexbox */
     text-align: right; /* Still useful for mobile dropdown */
     line-height: 56px; /* Maintain height */
-    padding: 0;
+    padding: 0; /* Remove padding */
     margin-left: 20px; /* Adjust spacing between items */
     vertical-align: middle; /* Still good practice */
   }
