@@ -364,12 +364,9 @@ a:visited { color: #00AA77; } /* Slightly different green for visited links */
   border: none;
   cursor: pointer;
   font-size: 0; /* Hide font-size affecting button if any */
-  padding: 0; /* Remove padding */
-  line-height: 56px; /* Align with nav line-height */
-  float: right;
+  padding: 0; /* No padding on button itself */
+  line-height: 1; /* Reset line-height to let flex handle vertical alignment */
   outline: none;
-  vertical-align: middle; /* Crucial for aligning with text */
-  margin-left: 25px; /* Consistent spacing */
 }
 
 .site-nav .theme-toggle svg {
@@ -602,21 +599,24 @@ body.light-mode .highlight .il { color: #009999 } /* Literal.Number.Integer.Long
   .site-nav .menu-icon svg { width: 18px; height: 16px; }
 
   .site-nav .trigger {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center items */
+    justify-content: flex-end; /* Push items to the right */
     clear: both;
     margin-bottom: 5px;
-    display: none;
+    /* display: none; */ /* Keep this for mobile toggle, handled by JS */
   }
 
   .site-nav:hover .trigger { display: block; }
 
   .site-nav .page-link,
   .site-nav .theme-toggle {
-    display: inline-block;
-    text-align: right;
-    line-height: 56px; /* Align with nav line-height */
-    padding: 0; /* Remove padding */
-    margin-left: 15px; /* Adjust margin for mobile to be less but still spaced */
-    vertical-align: middle; /* Ensure vertical alignment */
+    /* display: inline-block; */ /* No longer needed with flexbox */
+    text-align: right; /* Still useful for mobile dropdown */
+    line-height: 56px; /* Maintain height */
+    padding: 0;
+    margin-left: 20px; /* Adjust spacing between items */
+    vertical-align: middle; /* Still good practice */
   }
 
   .post-header h1 { font-size: 36px; }
