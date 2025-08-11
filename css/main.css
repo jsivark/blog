@@ -362,7 +362,7 @@ a:visited { color: #00AA77; } /* Slightly different green for visited links */
 .theme-toggle {
   background: none;
   border: none;
-  color: #00FF00; /* Green icon for dark mode */
+  /* color: #00FF00; Green icon for dark mode - removing this to let SVG stroke/fill define color */
   cursor: pointer;
   font-size: 24px;
   padding: 0 10px;
@@ -375,9 +375,18 @@ a:visited { color: #00AA77; } /* Slightly different green for visited links */
   width: 24px;
   height: 24px;
   vertical-align: middle;
+  stroke: #00FF00; /* Force green stroke for dark mode */
+  fill: none; /* Ensure no fill by default */
+}
+
+.theme-toggle .moon-icon {
+  stroke: #00FF00; /* Ensure moon is green in dark mode */
+  fill: none;
 }
 
 .theme-toggle .sun-icon {
+  stroke: #00FF00; /* Ensure sun is green in dark mode */
+  fill: none;
   display: none; /* Hide sun icon by default (dark mode) */
 }
 
@@ -385,6 +394,19 @@ a:visited { color: #00AA77; } /* Slightly different green for visited links */
 body.light-mode {
   background-color: #fdfdfd; /* Light background */
   color: #333; /* Dark text */
+}
+
+body.light-mode .theme-toggle svg {
+  stroke: #333; /* Force dark stroke for light mode */
+}
+
+body.light-mode .theme-toggle .moon-icon {
+  display: none;
+}
+
+body.light-mode .theme-toggle .sun-icon {
+  stroke: #333; /* Ensure sun is dark in light mode */
+  display: inline-block;
 }
 
 body.light-mode a         { color: #0000FF; } /* Blue links */
