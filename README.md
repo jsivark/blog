@@ -1,1 +1,1 @@
-my jekyll blog https://sivaramakrishnan-7.github.io/blog/
+my jekyll blog https://sivark.github.io/blog/
