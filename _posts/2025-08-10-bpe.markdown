@@ -17,7 +17,7 @@ mathjax: true
 }
 </style>
 
-This is a very short summary on Byte-Pair encoding, just how it works, not much on why it's that way. 
+This is a very short summary on **Byte-Pair encoding**, just how it works, not much on why it's that way. 
 
 Main theme is to iteratively merge frequent texts and give them an ID. The final dictionary we build is called vocabulary. 
 
