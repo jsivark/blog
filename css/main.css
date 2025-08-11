@@ -369,7 +369,7 @@ a:visited { color: #00AA77; } /* Slightly different green for visited links */
   float: right;
   outline: none;
   vertical-align: middle; /* Crucial for aligning with text */
-  margin-left: 15px; /* Keep spacing consistent */
+  margin-left: 25px; /* Increase spacing */
 }
 
 .site-nav .theme-toggle svg {
@@ -615,7 +615,7 @@ body.light-mode .highlight .il { color: #009999 } /* Literal.Number.Integer.Long
     text-align: right;
     line-height: 1.25; /* Keep original line-height for mobile menu */
     padding: 5px 10px;
-    margin-left: 10px; /* Adjust margin for mobile to be less */
+    margin-left: 15px; /* Adjust margin for mobile to be less but still spaced */
     vertical-align: middle; /* Ensure vertical alignment */
   }
 
