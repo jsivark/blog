@@ -364,12 +364,12 @@ a:visited { color: #00AA77; } /* Slightly different green for visited links */
   border: none;
   cursor: pointer;
   font-size: 0; /* Hide font-size affecting button if any */
-  padding: 0 5px; /* Reduce padding slightly */
-  line-height: 1; /* Align button baseline */
+  padding: 0; /* Remove padding */
+  line-height: 56px; /* Align with nav line-height */
   float: right;
   outline: none;
   vertical-align: middle; /* Crucial for aligning with text */
-  margin-left: 25px; /* Increase spacing */
+  margin-left: 25px; /* Consistent spacing */
 }
 
 .site-nav .theme-toggle svg {
@@ -613,8 +613,8 @@ body.light-mode .highlight .il { color: #009999 } /* Literal.Number.Integer.Long
   .site-nav .theme-toggle {
     display: inline-block;
     text-align: right;
-    line-height: 1.25; /* Keep original line-height for mobile menu */
-    padding: 5px 10px;
+    line-height: 56px; /* Align with nav line-height */
+    padding: 0; /* Remove padding */
     margin-left: 15px; /* Adjust margin for mobile to be less but still spaced */
     vertical-align: middle; /* Ensure vertical alignment */
   }
