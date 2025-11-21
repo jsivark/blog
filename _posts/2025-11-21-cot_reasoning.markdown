@@ -73,7 +73,7 @@ Experiments across models like Mistral and PaLM-2 confirm that CoT-decoding cons
 **Paper 2:** [Premise Order Matters in Reasoning with
 Large Language Models](https://arxiv.org/pdf/2402.08939)
 
-The core point of this paper is LLM's frailty and their dependence in order in which the premises are bing presented to them. 
+The core point of this paper is LLM's frailty and their dependence in order in which the premises are being presented to them. 
 
 Ideal state for LLMs to perform is when the premise order is presented in **Forward Order**. This aligns well with the intermediate steps required to reach the conclusion. 
 
@@ -97,7 +97,7 @@ Across all models, there's a strong preference for Forward order $$\tau = 1$$ an
 
 <img src="{{ '/assets/cot_reasoning/hallucination.png' | relative_url }}" alt="CoT Example" width="100%">
 
-Finally These behavior shouldn't be confused with "Lost-in-the-middle" effect, which is  models forget information in the middle of long contexts. However, the benchmark problems here are short (<300 tokens). Experiments placing rules at the beginning, middle, or end showed little difference compared to the massive impact of scrambling the order.
+Finally These behavior shouldn't be confused with **"Lost-in-the-middle"** effect, which is  models forget information in the middle of long contexts. However, the benchmark problems here are short (<300 tokens). Experiments placing rules at the beginning, middle, or end showed little difference compared to the massive impact of scrambling the order.
 
 These experiments confirm that LLMs possess a "left-to-right" reasoning bias that makes them significantly inferior to humans in handling disordered information. While humans can scan back and forth to assemble a proof, LLMs attempt to greedily resolve reasoning steps sequentially.
 
