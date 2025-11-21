@@ -39,9 +39,32 @@ $$
 
 Using this method, the more confident trajectories are chosen.
 
+### Example: Calculating $$\Delta$$
+
+To visualize this, imagine we ask a model a question. We compare two different paths it could take to generate the answer **"42"**.
+
+**Path A (Greedy Guessing)**
+The model jumps straight to the answer without "thinking."
+* **Prediction:** "42"
+* **Top 1 Probability ($p_1$):** 0.45
+* **Top 2 Probability ($p_2$):** 0.40 (e.g., for "43")
+* **$\Delta$ Score:** $0.45 - 0.40 = \mathbf{0.05}$
+
+**Path B (CoT Path)**
+The model generates a reasoning chain first: *"20 plus 22 equals 42."*
+* **Prediction:** "42" (after the reasoning steps)
+* **Top 1 Probability ($p_1$):** 0.95
+* **Top 2 Probability ($p_2$):** 0.01
+* **$\Delta$ Score:** $0.95 - 0.01 = \mathbf{0.94}$
+
+**Verdict:** Since Path B has a significantly higher $\Delta$ ($0.94 > 0.05$), the algorithm selects the CoT path, correctly identifying that the reasoning made the answer more robust.
+
 <img src="{{ '/assets/cot_example.png' | relative_url }}" alt="CoT Example" width="100%">
 
 ### Experiments & Findings 
 Experiments across models like Mistral and PaLM-2 confirm that CoT-decoding consistently outperforms standard greedy methods on math and commonsense tasks. The findings show that this technique effectively "unlocks" latent reasoning in pre-trained models, allowing them to rival instruction-tuned counterparts without needing additional data or prompting.
 
 <img src="{{ '/assets/cot_vs_greedy.png' | relative_url }}" alt="CoT Example" width="100%">
+
+**Paper:** [Premise Order Matters in Reasoning with
+Large Language Models](https://arxiv.org/pdf/2402.08939)
