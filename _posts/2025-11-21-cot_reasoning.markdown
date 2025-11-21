@@ -23,7 +23,7 @@ We will answer two questions:
 1. Can LLMs reason effectively without prompting?
 2. Does the order in which the model is being queried matter?
 
-### CoT is Hidden in the Decodes
+### CoT is Hidden
 
 **Paper 1:** [Chain-of-Thought Reasoning Without Prompting](https://arxiv.org/pdf/2402.10200)
 
