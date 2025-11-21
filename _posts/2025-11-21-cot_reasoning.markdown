@@ -39,4 +39,4 @@ $$
 
 Using this method, the more confident trajectories are chosen.
 
-![CoT Example]({{ site.baseurl }}/assets/cot_example.png){: width="100%" }
+<img src="{{ site.baseurl }}/assets/cot_example.png" alt="CoT Example" width="100%">
