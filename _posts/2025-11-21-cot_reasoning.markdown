@@ -40,3 +40,8 @@ $$
 Using this method, the more confident trajectories are chosen.
 
 <img src="{{ '/assets/cot_example.png' | relative_url }}" alt="CoT Example" width="100%">
+
+### Experiments & Findings 
+Experiments across models like Mistral and PaLM-2 confirm that CoT-decoding consistently outperforms standard greedy methods on math and commonsense tasks. The findings show that this technique effectively "unlocks" latent reasoning in pre-trained models, allowing them to rival instruction-tuned counterparts without needing additional data or prompting.
+
+<img src="{{ '/assets/cot_vs_greedy.png' | relative_url }}" alt="CoT Example" width="100%">
