@@ -6,6 +6,16 @@ excerpt: "#paper-summary"
 date:   2025-11-21 11:00:00
 mathjax: true
 ---
+<style>
+.post-header h1 {
+    font-size: 35px;
+}
+.post pre,
+.post code {
+    
+    font-size: 13px; /* make code smaller for this post... */
+}
+</style>
 
 ### Introduction
 
@@ -21,10 +31,12 @@ We usually use methods like "think step-by-step" in the prompt to elicit reasoni
 
 This paper argues that greedy decoding is not the way forward. In cases where the model's first prediction is wrong, there is a chance the right answer is in the top-k predictions.
 
-The presence of CoT in the trajectory is a strong indicator that the answer is correct. The authors provide a way to choose them with a method called CoT-decoding. Trajectories with CoT have higher confidence than the others. This confidence is calculated using $\Delta$ (Delta), which measures the difference between the top two probability paths:
+The presence of CoT in the trajectory is a strong indicator that the answer is correct. The authors provide a way to choose them with a method called CoT-decoding. Trajectories with CoT have higher confidence than the others. This confidence is calculated using $$\Delta$$ (Delta), which measures the difference between the top two probability paths:
 
 $$
 \Delta_{k, \text{answer}} = \frac{1}{|\text{answer}|} \sum_{x_t \in \text{answer}} (p(x_t^1 | x_{<t}) - p(x_t^2 | x_{<t}))
 $$
 
 Using this method, the more confident trajectories are chosen.
+
+<img src="{{ site.baseurl }}/assets/cot_example.png" width="100%" />
