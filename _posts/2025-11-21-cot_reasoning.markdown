@@ -75,9 +75,9 @@ The core point of this paper is LLM's frailty and their dependence in order in w
 
 Ideal state for LLMs to perform is when the premise order is presented in **Forward Order**. This aligns well with the intermediate steps required to reach the conclusion. 
 
-In Logical reasoning tasks, each problem has a set of facts, a set of rules, and a conclusion. The authors quantify the "disorder" of these premises using **Kendall Tau ($\tau$) distance**.
+In Logical reasoning tasks, each problem has a set of facts, a set of rules, and a conclusion. The authors quantify the "disorder" of these premises using **Kendall Tau ($$\tau$$) distance**.
 
-* **$\tau = 1$ (Forward Order):** Premises appear exactly in the order needed for the proof (Forward Chaining).
-* **$\tau = -1$ (Backward Order):** Premises appear in the exact reverse order (Backward Chaining).
-* **$\tau \approx 0$ (Shuffled):** Random ordering.
+* **$$\tau = 1$$ (Forward Order):** Premises appear exactly in the order needed for the proof (Forward Chaining).
+* **$$\tau = -1$$ (Backward Order):** Premises appear in the exact reverse order (Backward Chaining).
+* **$$\tau \approx 0$$ (Shuffled):** Random ordering.
 
