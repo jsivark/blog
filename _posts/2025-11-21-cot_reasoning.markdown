@@ -39,4 +39,4 @@ $$
 
 Using this method, the more confident trajectories are chosen.
 
-![CoT Example]({{ site.baseurl }}/assets/cot_example.png){: width="100%" }
+![CoT Example]({{ "/assets/cot_example.png" | relative_url }}){: width="100%" }
