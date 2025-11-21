@@ -4,8 +4,8 @@ email:
 description: "My little experiments from 'No 42,Milky-way galaxy,Orion arm,Laniakea Supercluster' "
 url: "https://jsivark.github.io"
 baseurl: "/blog"
-twitter_username: *yet to be added*
-github_username:  *yet to be added*
+twitter_username: "yet to be added"
+github_username:  "yet to be added"
 
 avatar: 'assets/minions1.png'
 future: true
