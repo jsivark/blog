@@ -39,4 +39,4 @@ $$
 
 Using this method, the more confident trajectories are chosen.
 
-<img src="{{ site.baseurl }}/assets/cot_example.png" alt="CoT Example" width="100%">
+<img src="{{ '/assets/cot_example.png' | relative_url }}" alt="CoT Example" width="100%">
