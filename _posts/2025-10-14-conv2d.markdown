@@ -1,0 +1,10 @@
+---
+layout: post
+comments: true
+title:  "Convolution"
+excerpt: "Notes on Convolution operation and a basic 2D convolution implementation"
+date:   2025-10-14 11:00:00
+mathjax: true
+---
+
+Convolution can be thought as a multiplication between two polynomial equations, There are multiple interpretation to develop better understanding and 

@@ -59,12 +59,12 @@ The model generates a reasoning chain first: *"20 plus 22 equals 42."*
 
 **Verdict:** Since Path B has a significantly higher $$\Delta$$ ($$0.94 > 0.05$$), the algorithm selects the CoT path, correctly identifying that the reasoning made the answer more robust.
 
-<img src="{{ '/assets/cot_example.png' | relative_url }}" alt="CoT Example" width="100%">
+<img src="{{ '/assets/cot_reasoning/cot_example.png' | relative_url }}" alt="CoT Example" width="100%">
 
 ### Experiments & Findings 
 Experiments across models like Mistral and PaLM-2 confirm that CoT-decoding consistently outperforms standard greedy methods on math and commonsense tasks. The findings show that this technique effectively "unlocks" latent reasoning in pre-trained models, allowing them to rival instruction-tuned counterparts without needing additional data or prompting.
 
-<img src="{{ '/assets/cot_vs_greedy.png' | relative_url }}" alt="CoT Example" width="100%">
+<img src="{{ '/assets/cot_reasoning/cot_vs_greedy.png' | relative_url }}" alt="CoT Example" width="100%">
 
 **Paper 2:** [Premise Order Matters in Reasoning with
 Large Language Models](https://arxiv.org/pdf/2402.08939)
@@ -81,3 +81,16 @@ In Logical reasoning tasks, each problem has a set of facts, a set of rules, and
 * **$$\tau = -1$$ (Backward Order):** Premises appear in the exact reverse order (Backward Chaining).
 * **$$\tau \approx 0$$ (Shuffled):** Random ordering.
 
+The study evaluated GPT-4-turbo, GPT-3.5-turbo, PaLM 2-L, and Gemini 1.0 Pro. The results revealed distinct behaviors across models
+
+Across all models, there's a strong preference for Forward order $$\tau = 1$$ and inclusion of distracting rules drastically amplifies the sensitivity to order.With 10 distracting rules, performance drops significantly when the order is shuffled ($$\tau=0$$). This confirms that LLMs are easily distracted, and "noise" makes them lose track of the logical thread if the order isn't perfect.
+
+**GPT-4-turbo (The U-Shape):** It performs best at $$\tau=1$$, drops performance at $$\tau=0$$ (random), but recovers performance at $$\tau=-1$$. This suggests GPT-4 is capable of Backward Chaining (reasoning from conclusion back to premises) effectively.
+
+<img src="{{ '/assets/cot_reasoning/ucurve.png' | relative_url }}" alt="CoT Example" width="100%">
+
+**PaLM 2-L (The Linear Drop):** This model struggles significantly with backward order. Its performance degrades linearly as the order moves away from $$\tau=1$$.
+
+**Fact Hallucination:** This is the most common error type in logical reasoning.The model reads a rule like "If A, then B". If the fact "A" appears later in the prompt, the model (processing left-to-right) hasn't seen it yet. Instead of waiting, it hallucinates that "A" is true to satisfy the rule immediately.This error escalates dramatically as $$\tau$$ decreases (becomes more disordered).
+
+<img src="{{ '/assets/cot_reasoning/hallucination.png' | relative_url }}" alt="CoT Example" width="100%">
