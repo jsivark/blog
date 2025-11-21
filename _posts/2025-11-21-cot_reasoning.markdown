@@ -46,18 +46,18 @@ To visualize this, imagine we ask a model a question. We compare two different p
 **Path A (Greedy Guessing)**
 The model jumps straight to the answer without "thinking."
 * **Prediction:** "42"
-* **Top 1 Probability ($p_1$):** 0.45
-* **Top 2 Probability ($p_2$):** 0.40 (e.g., for "43")
-* **$\Delta$ Score:** $0.45 - 0.40 = \mathbf{0.05}$
+* **Top 1 Probability ($$p_1$$):** 0.45
+* **Top 2 Probability ($$p_2$$):** 0.40 (e.g., for "43")
+* **$$\Delta$$ Score:** $$0.45 - 0.40 = \mathbf{0.05}$$
 
 **Path B (CoT Path)**
 The model generates a reasoning chain first: *"20 plus 22 equals 42."*
 * **Prediction:** "42" (after the reasoning steps)
-* **Top 1 Probability ($p_1$):** 0.95
-* **Top 2 Probability ($p_2$):** 0.01
-* **$\Delta$ Score:** $0.95 - 0.01 = \mathbf{0.94}$
+* **Top 1 Probability ($$p_1$$):** 0.95
+* **Top 2 Probability ($$p_2$$):** 0.01
+* **$$\Delta$$ Score:** $$0.95 - 0.01 = \mathbf{0.94}$$
 
-**Verdict:** Since Path B has a significantly higher $\Delta$ ($0.94 > 0.05$), the algorithm selects the CoT path, correctly identifying that the reasoning made the answer more robust.
+**Verdict:** Since Path B has a significantly higher $$\Delta$$ ($$0.94 > 0.05$$), the algorithm selects the CoT path, correctly identifying that the reasoning made the answer more robust.
 
 <img src="{{ '/assets/cot_example.png' | relative_url }}" alt="CoT Example" width="100%">
 
