@@ -25,7 +25,7 @@ We will answer two questions:
 
 ### CoT is Hidden in the Decodes
 
-**Paper:** [Chain-of-Thought Reasoning Without Prompting](https://arxiv.org/pdf/2402.10200)
+**Paper 1:** [Chain-of-Thought Reasoning Without Prompting](https://arxiv.org/pdf/2402.10200)
 
 We usually use methods like "think step-by-step" in the prompt to elicit reasoning from LLMs, and greedily decode the output.
 
@@ -66,5 +66,18 @@ Experiments across models like Mistral and PaLM-2 confirm that CoT-decoding cons
 
 <img src="{{ '/assets/cot_vs_greedy.png' | relative_url }}" alt="CoT Example" width="100%">
 
-**Paper:** [Premise Order Matters in Reasoning with
+**Paper 2:** [Premise Order Matters in Reasoning with
 Large Language Models](https://arxiv.org/pdf/2402.08939)
+
+### The Fragility of LLM Reasoning
+
+The core point of this paper is LLM's frailty and their dependence in order in which the premises are bing presented to them. 
+
+Ideal state for LLMs to perform is when the premise order is presented in **Forward Order**. This aligns well with the intermediate steps required to reach the conclusion. 
+
+In Logical reasoning tasks, each problem has a set of facts, a set of rules, and a conclusion. The authors quantify the "disorder" of these premises using **Kendall Tau ($\tau$) distance**.
+
+* **$\tau = 1$ (Forward Order):** Premises appear exactly in the order needed for the proof (Forward Chaining).
+* **$\tau = -1$ (Backward Order):** Premises appear in the exact reverse order (Backward Chaining).
+* **$\tau \approx 0$ (Shuffled):** Random ordering.
+
