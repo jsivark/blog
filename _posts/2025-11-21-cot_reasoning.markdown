@@ -25,7 +25,8 @@ We will answer two questions:
 
 ### CoT is Hidden
 
-**Paper 1:** [Chain-of-Thought Reasoning Without Prompting](https://arxiv.org/pdf/2402.10200)
+**Paper 1:** 
+[Chain-of-Thought Reasoning Without Prompting](https://arxiv.org/pdf/2402.10200)
 
 We usually use methods like "think step-by-step" in the prompt to elicit reasoning from LLMs, and greedily decode the output.
 
@@ -70,7 +71,8 @@ Experiments across models like Mistral and PaLM-2 confirm that CoT-decoding cons
 ### The Fragility of LLM Reasoning
 
 
-**Paper 2:** [Premise Order Matters in Reasoning with
+**Paper 2:** 
+[Premise Order Matters in Reasoning with
 Large Language Models](https://arxiv.org/pdf/2402.08939)
 
 The core point of this paper is LLM's frailty and their dependence in order in which the premises are being presented to them. 
@@ -91,7 +93,8 @@ Across all models, there's a strong preference for Forward order $$\tau = 1$$ an
 
 <img src="{{ '/assets/cot_reasoning/ucurve.png' | relative_url }}" alt="CoT Example" width="100%">
 
-**PaLM 2-L (The Linear Drop):** This model struggles significantly with backward order. Its performance degrades linearly as the order moves away from $$\tau=1$$.
+**PaLM 2-L (The Linear Drop):** 
+This model struggles significantly with backward order. Its performance degrades linearly as the order moves away from $$\tau=1$$.
 
 **Fact Hallucination:** This is the most common error type in logical reasoning.The model reads a rule like "If A, then B". If the fact "A" appears later in the prompt, the model (processing left-to-right) hasn't seen it yet. Instead of waiting, it hallucinates that "A" is true to satisfy the rule immediately.This error escalates dramatically as $$\tau$$ decreases (becomes more disordered).
 
