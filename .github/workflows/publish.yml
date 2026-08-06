@@ -46,3 +46,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # Pages can sit in deployment_in_progress for >10m on this repo;
+          # the default timeout then cancels and can wedge later deploys.
+          timeout: 1800000
