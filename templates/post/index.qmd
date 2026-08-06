@@ -1,29 +1,20 @@
 ---
-title: "Post template (copy me)"
-description: "Short one-line summary for the home page"
+title: "Post title"
+description: "One-line summary for the Writing page"
 author: "Siva"
 date: 2026-01-01
-categories: [notes]
 draft: true
 ---
-
-::: {.callout-note}
-## Delete this callout and set `draft: false` when you publish
-
-Copy `templates/post` → `posts/YYYY-MM-DD-slug`.
-:::
 
 Opening paragraph — what this note is about.
 
 ## Section
 
-Body text with an inline sidenote.^[This appears in the margin on wide screens.]
+Body with an inline sidenote.^[Appears in the margin on wide screens.]
 
 ::: {.column-margin}
-Optional longer margin note (figures, caveats, "watch the animation").
+Optional longer margin note.
 :::
-
-Display math:
 
 $$
 e^{i\pi} + 1 = 0
@@ -33,13 +24,12 @@ $$
 print("hello")
 ```
 
-<!-- Figures: drop PNGs next to this file and link with ![](fig.png)
+<!-- Image: ![alt](figure.png)
 
-Manim: put FFTButterfly.mp4 here, then:
-
+Video:
 ```{=html}
 <video class="manim-video" controls playsinline>
-  <source src="FFTButterfly.mp4" type="video/mp4">
+  <source src="clip.mp4" type="video/mp4">
 </video>
 ```
 -->

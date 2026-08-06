@@ -4,6 +4,6 @@ toc: false
 page-layout: full
 ---
 
-I'm **Siva**. I write notes on machine learning, math, and experiments that stick.
+I'm **Siva**.
 
-[GitHub](https://github.com/jsivark)
+I keep notes here while learning ML, math, and systems. Code lives on [GitHub](https://github.com/jsivark).

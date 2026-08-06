@@ -1,17 +1,12 @@
 ---
-title: "Random Notes"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: false
-  sort-ui: false
-  filter-ui: false
-  fields: [date, title, description]
-  page-size: 20
-  feed: true
-page-layout: full
+title: "Siva"
 toc: false
+page-layout: full
+format:
+  html:
+    body-classes: "landing"
 ---
 
-Notes on ML, math, and experiments worth keeping.
+I'm learning machine learning, math, and systems — and writing down what sticks.
+
+[Writing](writing.qmd) · [Projects](projects.qmd) · [GitHub](https://github.com/jsivark)

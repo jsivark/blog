@@ -281,12 +281,91 @@ div.callout {
   .list ul {
     list-style: none;
     padding: 0;
-    margin-top: 2rem;
+    margin-top: 1.25rem;
   }
 
   .list li {
     border-bottom: 1px solid var(--rn-rule);
-    padding: 1.6rem 0;
+    padding: 1.35rem 0;
+  }
+}
+
+/* Home: short landing, ekzhang-like */
+body.landing #title-block-header {
+  border-bottom: none;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0;
+}
+
+body.landing main.content > p:first-of-type {
+  font-size: 1.15rem;
+  max-width: 36rem;
+  line-height: 1.55;
+}
+
+/* Projects page — ekzhang-like entries, Tufte chrome */
+body.projects-page {
+  #title-block-header {
+    margin-bottom: 1.25rem;
+  }
+
+  main.content > p:first-of-type {
+    max-width: 36rem;
+    color: var(--rn-muted);
+  }
+
+  main.content > h3 {
+    font-family: var(--rn-brand);
+    font-weight: 700;
+    font-size: 1.45rem;
+    letter-spacing: -0.02em;
+    margin-top: 2.75rem;
+    margin-bottom: 0.55rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--rn-rule);
+  }
+
+  // First project heading: softer top rule (intro already separates)
+  main.content > h3:first-of-type {
+    margin-top: 2rem;
+  }
+}
+
+.project-meta {
+  font-family: $font-family-monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: var(--rn-muted);
+  margin: 0 0 0.65rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+.project-tagline {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--rn-ink);
+  margin: 0 0 0.9rem;
+  max-width: 36rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+.project-links {
+  margin-top: 0.85rem;
+  font-size: 0.95rem;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    font-family: var(--rn-brand);
+    font-weight: 600;
   }
 }
 

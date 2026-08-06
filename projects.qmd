@@ -1,0 +1,15 @@
+---
+title: "Projects"
+toc: true
+toc-title: "Contents"
+page-layout: article
+format:
+  html:
+    body-classes: "projects-page"
+---
+
+Things I build in the open.
+
+*Nothing here yet.*
+
+<!-- Paste blocks from templates/project.md below. Newest first. -->

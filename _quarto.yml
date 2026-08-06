@@ -8,7 +8,6 @@ project:
 
 website:
   title: "Random Notes"
-  description: "Notes on ML, math, and little experiments."
   site-url: https://jsivark.github.io/blog
   favicon: assets/minions.png
   repo-url: https://github.com/jsivark/blog
@@ -17,8 +16,10 @@ website:
   navbar:
     background: transparent
     left:
-      - text: Posts
-        href: index.qmd
+      - text: Writing
+        href: writing.qmd
+      - text: Projects
+        href: projects.qmd
       - text: About
         href: about.qmd
     right:
