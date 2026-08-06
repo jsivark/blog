@@ -1,0 +1,45 @@
+---
+title: "Byte pair encoding"
+description: "Simple notes on BPE and implementation"
+author: "Siva"
+date: 2025-08-10
+categories: [nlp, tokenization]
+toc: false
+---
+
+This is a very short summary on **Byte-Pair encoding**, focusing on its mechanism rather than its underlying principles.^[BPE started as a compression algorithm; NLP adopted it as a tokenization scheme.]
+
+The core idea is to iteratively merge frequent text segments and assign them a unique ID. The final dictionary we build is called vocabulary.
+
+"In the beginning there was the word", just kidding, we have individual letters, numbers, and some "symbols", which totals 256 possible values in 8-bit representation.
+
+```python
+import tiktoken
+
+tokenizer = tiktoken.get_encoding("gpt2")
+for i in range(10):
+    print(f"{i} -> {tokenizer.decode([i])}")
+```
+
+![BPE vocabulary output from tiktoken](bpe_output.png){fig-alt="Printed token IDs 0–9 from the GPT-2 tokenizer"}
+
+BPE then expands upon this initial vocabulary. One might wonder about the limitations of byte array representation: In a byte array, each element or character is mapped to a unique number, meaning N characters will require N distinct numerical representations. However, human language often exhibits frequent patterns, where specific character sequences appear repeatedly. These frequent patterns deserve their own unique IDs. This process effectively reduces the length of the input sequence while gradually increasing the size of the vocabulary.
+
+Here is one merge step on a tiny string — count adjacent pairs, then replace the winner:
+
+```{=html}
+<video class="manim-video" controls playsinline preload="metadata" style="width:100%;max-width:42rem;">
+  <source src="bpe_merge.mp4" type="video/mp4">
+</video>
+<p class="figure-caption"><em>Figure: one BPE merge — <code>("a","a")</code> wins in <code>"aabaa"</code>, so those pairs become the token <code>aa</code> (length 5 → 3).</em></p>
+```
+
+### BPE algorithm steps
+
+1. **Find frequent pairs** — Iterate through the text to find the most frequently occurring pair of characters.
+
+2. **Merge and replace**
+    - Replace the identified pair with a new, unique ID.
+    - Build a corresponding lookup table (vocabulary).
+
+Repeat steps 1 and 2 until no new pair can be found. The number of merges is a hyperparameter; for example, for GPT-2, this is 50,257.

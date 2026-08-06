@@ -1,0 +1,9 @@
+# Shared defaults for every post in this folder
+author: "Siva"
+toc: true
+toc-title: "On this page"
+reference-location: margin
+citation-location: margin
+format:
+  html:
+    code-tools: false

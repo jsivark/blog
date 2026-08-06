@@ -1,0 +1,17 @@
+---
+title: "Random Notes"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [date, title, description]
+  page-size: 20
+  feed: true
+page-layout: full
+toc: false
+---
+
+Notes on ML, math, and experiments worth keeping.

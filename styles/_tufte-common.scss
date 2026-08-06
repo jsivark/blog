@@ -1,0 +1,340 @@
+/* Shared reading styles — colors come from --rn-* set by light/dark themes */
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+::selection {
+  background: color-mix(in srgb, var(--rn-accent) 28%, transparent);
+  color: var(--rn-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--rn-accent);
+  outline-offset: 3px;
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 10% -10%, var(--rn-glow-a) 0%, transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, var(--rn-glow-b) 0%, transparent 50%),
+    var(--rn-paper);
+  color: var(--rn-ink);
+  font-family: $font-family-serif;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.navbar {
+  border-bottom: 1px solid var(--rn-rule);
+  backdrop-filter: blur(8px);
+  background: color-mix(in srgb, var(--rn-paper) 88%, transparent) !important;
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+
+  .navbar-brand {
+    font-family: var(--rn-brand);
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: -0.02em;
+    color: var(--rn-ink) !important;
+  }
+
+  .nav-link {
+    font-family: $font-family-serif;
+    font-size: 0.95rem;
+    color: var(--rn-muted) !important;
+
+    &:hover,
+    &.active {
+      color: var(--rn-ink) !important;
+    }
+  }
+
+  // Quarto's built-in light/dark toggle
+  .quarto-color-scheme-toggle .btn {
+    color: var(--rn-muted) !important;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+.navbar-title {
+  font-family: var(--rn-brand);
+  font-weight: 700;
+}
+
+#quarto-content,
+.page-columns .content {
+  font-size: 1.05rem;
+}
+
+/* Do not set max-width on main.content — Quarto article layout
+   already grids TOC | body | margin notes; constraining main clips text. */
+#quarto-content .page-columns {
+  overflow: visible;
+}
+
+#quarto-content main.content,
+#quarto-content #title-block-header {
+  max-width: none;
+  overflow: visible;
+}
+
+#title-block-header {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--rn-rule);
+  padding-bottom: 1.25rem;
+
+  .title {
+    font-family: var(--rn-brand);
+    font-weight: 700;
+    font-size: clamp(1.9rem, 3vw, 2.5rem);
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 0.65rem;
+  }
+
+  .subtitle,
+  .description {
+    color: var(--rn-muted);
+    font-size: 1.1rem;
+    font-style: italic;
+  }
+
+  .quarto-categories .quarto-category,
+  .quarto-title-meta {
+    font-family: $font-family-monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.02em;
+    color: var(--rn-muted);
+  }
+}
+
+.quarto-title-meta-contents a {
+  color: var(--rn-muted);
+}
+
+.content {
+  h1, h2, h3, h4 {
+    font-family: var(--rn-brand);
+    letter-spacing: -0.02em;
+    margin-top: 2rem;
+  }
+
+  h2 {
+    font-size: 1.45rem;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p, li {
+    hyphens: auto;
+  }
+
+  a {
+    color: var(--rn-link);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+
+    &:hover {
+      color: var(--rn-link-hover);
+    }
+  }
+
+  blockquote {
+    border-left: 3px solid var(--rn-accent);
+    background: transparent;
+    color: var(--rn-muted);
+    font-style: italic;
+    padding: 0.25rem 0 0.25rem 1.1rem;
+  }
+
+  img, video {
+    border-radius: 2px;
+    margin: 1.25rem 0;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--rn-rule);
+  }
+
+  // Dark screenshots (terminal dumps) read better with a little padding feel
+  img {
+    background: var(--rn-code);
+  }
+
+  figure {
+    margin: 1.75rem 0;
+  }
+
+  figcaption, .figure-caption {
+    font-size: 0.9rem;
+    color: var(--rn-muted);
+    font-style: italic;
+    text-align: left;
+  }
+}
+
+pre, code {
+  font-family: $font-family-monospace !important;
+}
+
+div.sourceCode,
+pre {
+  background: var(--rn-code) !important;
+  border: 1px solid var(--rn-rule);
+  border-radius: 4px;
+}
+
+code:not(pre code) {
+  background: var(--rn-code);
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+  font-size: 0.88em;
+}
+
+.footnote-ref, .citation-ref {
+  color: var(--rn-accent) !important;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+.column-margin,
+aside,
+.footnote,
+div.footnote,
+.quarto-reference-contents,
+section.footnotes {
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: var(--rn-muted);
+}
+
+.column-margin .footnote-back,
+.footnote-back {
+  color: var(--rn-accent);
+}
+
+div.callout {
+  border-radius: 0;
+  border: none;
+  border-left: 3px solid var(--rn-rule);
+  background: transparent !important;
+  box-shadow: none !important;
+
+  .callout-header {
+    background: transparent !important;
+    border: none !important;
+    font-family: var(--rn-brand);
+  }
+}
+
+.quarto-listing {
+  .listing-title {
+    font-family: var(--rn-brand);
+    font-weight: 700;
+    font-size: 1.45rem;
+    letter-spacing: -0.02em;
+    color: var(--rn-ink) !important;
+    text-decoration: none !important;
+    transition: color 0.15s ease;
+  }
+
+  .list li:hover .listing-title {
+    color: var(--rn-link) !important;
+  }
+
+  .listing-description {
+    color: var(--rn-muted);
+    font-style: italic;
+    margin-top: 0.35rem;
+    max-width: 40rem;
+  }
+
+  .listing-date,
+  .listing-categories .listing-category {
+    font-family: $font-family-monospace;
+    font-size: 0.75rem;
+    color: var(--rn-muted);
+  }
+
+  .list ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+  }
+
+  .list li {
+    border-bottom: 1px solid var(--rn-rule);
+    padding: 1.6rem 0;
+  }
+}
+
+// Category chips — quiet, not pill-cluster noise
+.quarto-categories .quarto-category {
+  border: 1px solid var(--rn-rule) !important;
+  background: transparent !important;
+  border-radius: 2px !important;
+  color: var(--rn-muted) !important;
+  font-weight: 500;
+}
+
+#quarto-margin-sidebar {
+  .quarto-toc li a {
+    color: var(--rn-muted);
+    border-left-color: transparent;
+  }
+
+  .quarto-toc li a.active {
+    color: var(--rn-ink);
+    border-left-color: var(--rn-accent);
+  }
+}
+
+.nav-footer {
+  border-top: 1px solid var(--rn-rule);
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  color: var(--rn-muted);
+}
+
+.manim-video,
+video.manim-video {
+  width: 100%;
+  background: #111;
+  border: 1px solid var(--rn-rule);
+}
+
+.MathJax, mjx-container {
+  font-size: 1.05em !important;
+}
+
+@media (max-width: 991px) {
+  body {
+    font-size: 17px;
+  }
+
+  #title-block-header .title {
+    font-size: 1.75rem;
+  }
+}

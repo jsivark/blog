@@ -1,0 +1,55 @@
+/*-- scss:defaults --*/
+
+$font-family-serif: "Source Serif 4", "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
+$font-family-sans-serif: "Source Serif 4", Georgia, serif;
+$font-family-monospace: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+
+$font-size-root: 19px;
+$line-height-base: 1.65;
+
+$body-bg: #141210;
+$body-color: #e8e4dc;
+$link-color: #7eb8c4;
+$link-hover-color: #b6dde5;
+
+$primary: #7eb8c4;
+$secondary: #a8a29e;
+$light: #1c1917;
+$dark: #e8e4dc;
+
+$headings-font-weight: 600;
+$headings-color: #f5f2eb;
+
+$code-color: #e8e4dc;
+$code-bg: #1c1917;
+$pre-bg: #1c1917;
+
+$navbar-bg: transparent;
+$navbar-fg: #e8e4dc;
+$footer-bg: transparent;
+$footer-fg: #a8a29e;
+
+$toc-color: #a8a29e;
+$toc-font-size: 0.85rem;
+$toc-active-border: #f97316;
+
+$border-color: #2a2622;
+$card-border-color: transparent;
+
+/*-- scss:rules --*/
+
+:root {
+  --rn-paper: #141210;
+  --rn-ink: #e8e4dc;
+  --rn-muted: #a8a29e;
+  --rn-rule: #2a2622;
+  --rn-accent: #f97316;
+  --rn-link: #7eb8c4;
+  --rn-link-hover: #b6dde5;
+  --rn-code: #1c1917;
+  --rn-glow-a: #1a1714;
+  --rn-glow-b: #0f0e0c;
+  --rn-brand: "Syne", "Source Serif 4", sans-serif;
+}
+
+@import "tufte-common";

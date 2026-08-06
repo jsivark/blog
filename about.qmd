@@ -1,0 +1,9 @@
+---
+title: About
+toc: false
+page-layout: full
+---
+
+I'm **Siva**. I write notes on machine learning, math, and experiments that stick.
+
+[GitHub](https://github.com/jsivark)

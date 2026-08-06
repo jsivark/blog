@@ -1,0 +1,54 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "posts/**/*.qmd"
+    - "!templates/**"
+
+website:
+  title: "Random Notes"
+  description: "Notes on ML, math, and little experiments."
+  site-url: https://jsivark.github.io/blog
+  favicon: assets/minions.png
+  repo-url: https://github.com/jsivark/blog
+  reader-mode: false
+  page-navigation: false
+  navbar:
+    background: transparent
+    left:
+      - text: Posts
+        href: index.qmd
+      - text: About
+        href: about.qmd
+    right:
+      - icon: github
+        href: https://github.com/jsivark
+        aria-label: GitHub
+  page-footer:
+    center: "Random Notes"
+  search: false
+
+format:
+  html:
+    theme:
+      light: styles/tufte.scss
+      dark: styles/tufte-dark.scss
+    toc: true
+    toc-location: right
+    toc-depth: 3
+    toc-title: "On this page"
+    code-copy: true
+    code-overflow: wrap
+    link-external-newwindow: true
+    page-layout: article
+    reference-location: margin
+    citation-location: margin
+    html-math-method: mathjax
+    smooth-scroll: true
+    lang: en
+    include-in-header:
+      - styles/fonts.html
+
+execute:
+  freeze: auto
