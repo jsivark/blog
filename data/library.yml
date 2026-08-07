@@ -7,11 +7,11 @@ books:
   - title: "Computer Systems: A Programmer's Perspective"
     author: "Bryant & O'Hallaron"
     category: systems
-    page: 0
-    pages: 1120
+    page: 61
+    pages: 1105
 
   - title: "The Count of Monte Cristo"
     author: "Alexandre Dumas"
     category: fiction
-    page: 0
-    pages: 1276
+    page: 41
+    pages: 1566
