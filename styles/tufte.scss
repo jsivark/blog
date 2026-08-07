@@ -4,8 +4,9 @@ $font-family-serif: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "
 $font-family-sans-serif: et-book, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
 $font-family-monospace: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
+/* Tufte/Fabian: 15px root, body set to 1.4rem (~21px) in _tufte-common */
 $font-size-root: 15px;
-$line-height-base: 1.4;
+$line-height-base: 1.45;
 
 /* Classic Tufte / Fabian Pedregosa paper */
 $body-bg: #fffff8;
