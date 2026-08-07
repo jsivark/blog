@@ -1,56 +1,57 @@
 /*-- scss:defaults --*/
 
-$font-family-serif: "Newsreader", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-$font-family-sans-serif: "Newsreader", ui-serif, Georgia, serif;
-$font-family-monospace: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+$font-family-serif: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+$font-family-sans-serif: et-book, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+$font-family-monospace: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
-$font-size-root: 18px;
-$line-height-base: 1.65;
+$font-size-root: 15px;
+$line-height-base: 1.4;
 
-$body-bg: #f3eee4;
-$body-color: #26221d;
-$link-color: #5f5142;
-$link-hover-color: #26221d;
+/* Classic Tufte / Fabian Pedregosa paper */
+$body-bg: #fffff8;
+$body-color: #111;
+$link-color: #111;
+$link-hover-color: #111;
 
-$primary: #5f5142;
-$secondary: #756d62;
-$light: #f3eee4;
-$dark: #26221d;
+$primary: #111;
+$secondary: #555;
+$light: #fffff8;
+$dark: #111;
 
-$headings-font-weight: 500;
-$headings-color: #26221d;
+$headings-font-weight: 400;
+$headings-color: #111;
 
-$code-color: #26221d;
-$code-bg: #e9e1d4;
-$pre-bg: #e9e1d4;
+$code-color: #111;
+$code-bg: #f3f0e6;
+$pre-bg: #f3f0e6;
 
 $navbar-bg: transparent;
-$navbar-fg: #26221d;
+$navbar-fg: #111;
 $footer-bg: transparent;
-$footer-fg: #756d62;
+$footer-fg: #555;
 
-$toc-color: #756d62;
+$toc-color: #555;
 $toc-font-size: 0.85rem;
-$toc-active-border: #5f5142;
+$toc-active-border: #111;
 
-$border-color: #d6cdbd;
+$border-color: #ddd;
 $card-border-color: transparent;
 
 /*-- scss:rules --*/
 
 :root {
-  --rn-paper: #f3eee4;
-  --rn-ink: #26221d;
-  --rn-muted: #756d62;
-  --rn-rule: #d6cdbd;
-  --rn-soft: #e9e1d4;
-  --rn-accent: #5f5142;
-  --rn-link: #5f5142;
-  --rn-link-hover: #26221d;
-  --rn-code: #e9e1d4;
+  --rn-paper: #fffff8;
+  --rn-ink: #111;
+  --rn-muted: #555;
+  --rn-rule: #ddd;
+  --rn-soft: #f3f0e6;
+  --rn-accent: #a00000;
+  --rn-link: #111;
+  --rn-link-hover: #111;
+  --rn-code: #f3f0e6;
   --rn-glow-a: transparent;
   --rn-glow-b: transparent;
-  --rn-brand: "Newsreader", ui-serif, Georgia, serif;
+  --rn-brand: et-book, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
 }
 
 @import "tufte-common";

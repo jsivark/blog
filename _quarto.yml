@@ -10,6 +10,8 @@ project:
     - styles/library-data.js
     - styles/library.js
     - styles/library-scripts.html
+    - styles/et-book.css
+    - styles/et-book/**
 
 website:
   title: "Siva"
@@ -55,6 +57,8 @@ format:
     html-math-method: mathjax
     smooth-scroll: true
     lang: en
+    css:
+      - styles/et-book.css
     include-in-header:
       - styles/fonts.html
 

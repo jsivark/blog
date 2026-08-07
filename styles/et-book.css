@@ -1,0 +1,32 @@
+/* Edward Tufte's et-book — same family used by classic Tufte CSS / fa.bianp.net */
+@font-face {
+  font-family: "et-book";
+  src: url("et-book/et-book-roman.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "et-book";
+  src: url("et-book/et-book-italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "et-book";
+  src: url("et-book/et-book-bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "et-book-roman-old-style";
+  src: url("et-book/et-book-oldstyle.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
