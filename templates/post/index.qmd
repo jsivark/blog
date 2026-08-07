@@ -3,7 +3,7 @@ title: "Post title"
 description: "One-line summary"
 author: "Siva"
 date: 2026-01-01
-categories: [technical]
+categories: [technical]  # or notes | personal
 draft: true
 ---
 

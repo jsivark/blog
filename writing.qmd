@@ -27,6 +27,7 @@ format:
 ::: {.filters}
 <button class="filter-button" type="button" data-filter="technical" aria-pressed="true">Technical</button>
 <button class="filter-button" type="button" data-filter="notes" aria-pressed="false">Notes</button>
+<button class="filter-button" type="button" data-filter="personal" aria-pressed="false">Personal</button>
 :::
 :::
 

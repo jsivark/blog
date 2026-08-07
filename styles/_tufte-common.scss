@@ -517,41 +517,173 @@ body.writing-page {
   }
 }
 
-/* About — compact resume lines */
+/* About — winding career path (map-like, still minimal) */
 body.about-page {
-  .resume-block {
-    max-width: 36rem;
-    margin-top: 1.75rem;
+  #title-block-header {
+    display: none;
   }
 
-  .resume-block h2 {
-    margin-top: 1.75rem;
-    margin-bottom: 0.65rem;
-    font-size: 1.15rem;
-    font-weight: 500;
+  main.content {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding-top: 2.75rem;
   }
 
-  .resume-block p,
-  .resume-block li {
+  .eyebrow {
+    margin: 0 0 1rem;
     color: var(--rn-muted);
-    font-size: 0.98rem;
-  }
-
-  .resume-block ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .resume-block li {
-    padding: 0.35rem 0;
-    border-bottom: 1px solid var(--rn-rule);
-  }
-
-  .resume-block .when {
     font-family: ui-sans-serif, system-ui, sans-serif;
     font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  main.content > h1 {
+    max-width: 28rem;
+    margin: 0 0 1.1rem;
+    font-family: var(--rn-brand);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 3rem);
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+  }
+
+  .about-lede {
+    max-width: 34rem;
     color: var(--rn-muted);
+  }
+
+  .career-map {
+    position: relative;
+    margin: 2.75rem 0 2rem;
+    min-height: 40rem;
+  }
+
+  .career-route {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .career-route-line {
+    fill: none;
+    stroke: var(--rn-rule);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-dasharray: 1 7;
+  }
+
+  .career-stops {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    padding: 0.5rem 0 1rem;
+  }
+
+  .career-stop {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1.15rem 1fr;
+    align-items: start;
+    gap: 0.85rem;
+    min-height: 4.25rem;
+  }
+
+  .career-node {
+    grid-column: 2;
+    justify-self: center;
+    width: 11px;
+    height: 11px;
+    margin-top: 0.35rem;
+    border-radius: 50%;
+    border: 2px solid var(--rn-paper);
+    background: var(--rn-accent);
+    box-shadow: 0 0 0 1px var(--rn-rule);
+  }
+
+  .career-node-end {
+    background: var(--rn-ink);
+  }
+
+  .career-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    max-width: 17rem;
+    padding: 0.15rem 0;
+    color: var(--rn-ink);
+    font-size: 0.98rem;
+    line-height: 1.4;
+
+    .when {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.02em;
+      color: var(--rn-muted);
+    }
+
+    .detail {
+      color: var(--rn-muted);
+      font-size: 0.9rem;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  .career-stop.turn-left .career-card {
+    grid-column: 1;
+    justify-self: end;
+    text-align: right;
+  }
+
+  .career-stop.turn-right .career-card {
+    grid-column: 3;
+    justify-self: start;
+    text-align: left;
+  }
+
+  .career-stop.turn-center .career-card {
+    grid-column: 1 / -1;
+    justify-self: center;
+    text-align: center;
+    max-width: 22rem;
+    margin-top: 0.35rem;
+  }
+
+  .career-stop.turn-center .career-node {
+    grid-column: 2;
+  }
+
+  @media (max-width: 700px) {
+    .career-route {
+      display: none;
+    }
+
+    .career-stop {
+      grid-template-columns: 1.15rem 1fr;
+      gap: 0.85rem;
+    }
+
+    .career-node {
+      grid-column: 1;
+    }
+
+    .career-stop.turn-left .career-card,
+    .career-stop.turn-right .career-card,
+    .career-stop.turn-center .career-card {
+      grid-column: 2;
+      justify-self: start;
+      text-align: left;
+      max-width: none;
+    }
   }
 }
 

@@ -8,7 +8,7 @@
 cp -R templates/post posts/YYYY-MM-DD-slug
 ```
 
-Edit `posts/YYYY-MM-DD-slug/index.qmd`: set title / date, set `categories: [technical]` or `[notes]`, remove `draft: true`.
+Edit `posts/YYYY-MM-DD-slug/index.qmd`: set title / date, set `categories: [technical]`, `[notes]`, or `[personal]`, remove `draft: true`.
 
 Useful bits:
 

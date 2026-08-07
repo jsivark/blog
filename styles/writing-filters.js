@@ -1,7 +1,7 @@
 (() => {
   const buttons = Array.from(document.querySelectorAll("[data-filter]"));
   const status = document.querySelector("#filter-status");
-  const valid = new Set(["technical", "notes"]);
+  const valid = new Set(["technical", "notes", "personal"]);
 
   const posts = () =>
     Array.from(document.querySelectorAll(".quarto-listing .quarto-post"));
@@ -11,6 +11,7 @@
   const kindOf = (post) => {
     const cats = Array.from(post.querySelectorAll(".listing-category"))
       .map((el) => el.textContent.trim().toLowerCase());
+    if (cats.includes("personal")) return "personal";
     if (cats.includes("notes")) return "notes";
     if (cats.includes("technical")) return "technical";
     return "technical";
@@ -62,7 +63,6 @@
   } else {
     start();
   }
-  // Re-apply after Quarto listing scripts finish
   window.addEventListener("load", start);
   setTimeout(start, 50);
   setTimeout(start, 250);

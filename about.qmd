@@ -5,35 +5,80 @@ page-layout: full
 format:
   html:
     body-classes: "about-page"
+    title-block-style: none
 ---
 
-I'm **Siva**. Research analyst at Zoho, working on anomaly detection and (lately) RL for LLM agents.
+```{=html}
+<p class="eyebrow">Path</p>
+<h1>A short map of where I’ve been.</h1>
+<p class="about-lede">I’m Siva. Research analyst at Zoho — anomaly detection, and lately RL for LLM agents.</p>
 
-::: {.resume-block}
+<div class="career-map">
+  <svg class="career-route" viewBox="0 0 400 720" preserveAspectRatio="none" aria-hidden="true">
+    <path class="career-route-line" d="M200 24
+      C 200 70, 110 90, 110 140
+      S 290 190, 290 250
+      S 110 310, 110 370
+      S 290 430, 290 490
+      S 200 550, 200 610
+      S 200 680, 200 700" />
+  </svg>
 
-## Now
+  <div class="career-stops">
+    <div class="career-stop turn-left">
+      <div class="career-node" aria-hidden="true"></div>
+      <div class="career-card">
+        <span class="when">2022 – present · Chennai</span>
+        <strong>Zoho Corporation</strong> — Research Analyst
+        <span class="detail">Anomaly detection · DGA classification · RL for agents</span>
+      </div>
+    </div>
 
-- Research Analyst, Zoho Corporation — anomaly detection, DGA classification, RL for agents  
-  <span class="when">2022 – present · Chennai</span>
+    <div class="career-stop turn-right">
+      <div class="career-node" aria-hidden="true"></div>
+      <div class="career-card">
+        <span class="when">2021 · Chennai</span>
+        <strong>RPA / analytics</strong>
+        <span class="detail">UiPath workflows · Power BI POCs</span>
+      </div>
+    </div>
 
-## Before
+    <div class="career-stop turn-left">
+      <div class="career-node" aria-hidden="true"></div>
+      <div class="career-card">
+        <span class="when">2019 – 2021</span>
+        <strong>Anna University</strong> — Technical Assistant
+        <span class="detail">Spectroscopy lab support · FTIR, UV-Vis, Raman</span>
+      </div>
+    </div>
 
-- RPA / Power BI POCs  
-  <span class="when">2021 · Chennai</span>
-- Technical Assistant, Anna University — spectroscopy lab support  
-  <span class="when">2019 – 2021</span>
+    <div class="career-stop turn-right">
+      <div class="career-node" aria-hidden="true"></div>
+      <div class="career-card">
+        <span class="when">2017 – 2019</span>
+        <strong>M.Sc. Physics</strong>
+        <span class="detail">RKM Vivekananda College · Univ. of Madras</span>
+      </div>
+    </div>
 
-## Education
+    <div class="career-stop turn-left">
+      <div class="career-node" aria-hidden="true"></div>
+      <div class="career-card">
+        <span class="when">2014 – 2017</span>
+        <strong>B.Sc. Physics</strong>
+        <span class="detail">RKM Vivekananda College · Univ. of Madras</span>
+      </div>
+    </div>
 
-- M.Sc. Physics, RKM Vivekananda College (Univ. of Madras)  
-  <span class="when">2017 – 2019</span>
-- B.Sc. Physics, RKM Vivekananda College (Univ. of Madras)  
-  <span class="when">2014 – 2017</span>
-
-## Tools
-
-Python, PyTorch, NumPy, Pandas, SQL, Git
-
-:::
+    <div class="career-stop turn-center">
+      <div class="career-node career-node-end" aria-hidden="true"></div>
+      <div class="career-card">
+        <span class="when">Tools</span>
+        <span class="detail">Python · PyTorch · NumPy · Pandas · SQL · Git</span>
+      </div>
+    </div>
+  </div>
+</div>
+```
 
 [GitHub](https://github.com/jsivark) · [Writing](writing.qmd)
