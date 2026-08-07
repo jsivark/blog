@@ -14,8 +14,6 @@ format:
 Hello
 :::
 
-# Notes on ML, systems, and what I’m still figuring out.
-
 I'm Siva. I like fiction, films, and the idea of a quieter life someday. I also like building things and learning tech, math, and physics for their own sake. Notes as I figure things out.
 
 ```{=html}
