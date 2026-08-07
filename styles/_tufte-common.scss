@@ -449,6 +449,19 @@ body.library-page {
     font-size: 1rem;
   }
 
+  .lib-book.is-finished .lib-meta {
+    margin-top: 0.2rem;
+    color: var(--rn-muted);
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.78rem;
+  }
+
+  .lib-empty {
+    margin: 0;
+    color: var(--rn-muted);
+    font-size: 1rem;
+  }
+
   .lib-stack {
     gap: 0.85rem;
   }

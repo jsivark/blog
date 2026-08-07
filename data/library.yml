@@ -1,7 +1,10 @@
 # Library — edit this file, then commit (or run: python3 scripts/sync_library.py).
-# page / pages → progress %. When page >= pages, the book moves to Read under its category.
 #
-# fields: title, author (optional), category, page, pages
+# page / pages → progress %. When page >= pages, the book moves to Library under its category.
+# added:    YYYY-MM-DD  when you started / added it
+# finished: YYYY-MM-DD  set when done (used for “days read”)
+#
+# fields: title, author (optional), category, page, pages, added, finished (optional)
 
 books:
   - title: "Computer Systems: A Programmer's Perspective"
@@ -9,9 +12,11 @@ books:
     category: systems
     page: 1105
     pages: 1105
+    added: 2026-07-15
 
   - title: "The Count of Monte Cristo"
     author: "Alexandre Dumas"
     category: fiction
     page: 41
     pages: 1566
+    added: 2026-07-20

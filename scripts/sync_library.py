@@ -5,7 +5,9 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import sys
+from datetime import date
 from pathlib import Path
 
 try:
@@ -19,6 +21,28 @@ SRC = ROOT / "data" / "library.yml"
 JS_UI = ROOT / "styles" / "library.js"
 OUT_DATA = ROOT / "styles" / "library-data.js"
 OUT_INCLUDE = ROOT / "styles" / "library-scripts.html"
+
+DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
+
+def parse_date(value, *, field: str, title: str) -> str | None:
+    if value is None or value == "":
+        return None
+    if isinstance(value, date):
+        return value.isoformat()
+    text = str(value).strip()
+    if not DATE_RE.match(text):
+        sys.stderr.write(
+            f"library.yml: '{title}' {field} must be YYYY-MM-DD (got {value!r})\n"
+        )
+        sys.exit(1)
+    # Validate calendar date
+    try:
+        date.fromisoformat(text)
+    except ValueError:
+        sys.stderr.write(f"library.yml: '{title}' {field} is not a valid date\n")
+        sys.exit(1)
+    return text
 
 
 def main() -> None:
@@ -47,6 +71,24 @@ def main() -> None:
             sys.stderr.write(f"library.yml: '{title}' needs pages > 0\n")
             sys.exit(1)
         page = max(0, min(page, pages))
+        added = parse_date(raw.get("added"), field="added", title=title)
+        finished = parse_date(raw.get("finished"), field="finished", title=title)
+        if page >= pages and not finished:
+            sys.stderr.write(
+                f"library.yml: '{title}' is finished (page >= pages) but has no finished: date\n"
+            )
+            sys.exit(1)
+        if finished and not added:
+            sys.stderr.write(
+                f"library.yml: '{title}' has finished but no added: date\n"
+            )
+            sys.exit(1)
+        if added and finished and finished < added:
+            sys.stderr.write(
+                f"library.yml: '{title}' finished is before added\n"
+            )
+            sys.exit(1)
+
         cleaned.append(
             {
                 "title": title,
@@ -54,6 +96,8 @@ def main() -> None:
                 "category": str(raw.get("category") or "other").strip().lower(),
                 "page": page,
                 "pages": pages,
+                "added": added,
+                "finished": finished,
             }
         )
 
@@ -64,7 +108,6 @@ def main() -> None:
     )
     OUT_DATA.write_text(data_js, encoding="utf-8")
 
-    # Query-string bust so browsers fetch fresh JS after each publish.
     ui = JS_UI.read_text(encoding="utf-8") if JS_UI.exists() else ""
     bust = hashlib.sha1((data_js + ui).encode("utf-8")).hexdigest()[:10]
     OUT_INCLUDE.write_text(

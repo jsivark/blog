@@ -33,6 +33,8 @@ Edit `data/library.yml`:
   category: systems   # any label you like
   page: 120           # where you are
   pages: 1120         # total in your edition
+  added: 2026-07-15   # started / added
+  # finished: 2026-08-07   # set when page >= pages
 ```
 
 Then sync (CI does this on publish too):
@@ -40,9 +42,10 @@ Then sync (CI does this on publish too):
 ```bash
 pip install pyyaml   # once
 python3 scripts/sync_library.py
+# optional: python3 scripts/test_library.py
 ```
 
-Progress is `page / pages`. Home shows currently-reading bars. At 100% a book leaves the home strip and appears on **Library** under its category.
+Progress is `page / pages`. Home shows currently-reading bars. At 100% set `finished:` — the book leaves home and appears on **Library** with added date and days read.
 
 `sync_library.py` also writes cache-busted script tags (`?v=…`) so browsers pick up new page numbers after publish without a hard refresh.
 
