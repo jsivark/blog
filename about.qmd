@@ -11,7 +11,7 @@ format:
 ```{=html}
 <p class="eyebrow">Path</p>
 <h1>A short map of where I’ve been.</h1>
-<p class="about-lede">I’m Siva. Research analyst at Zoho — anomaly detection, and lately RL for LLM agents.</p>
+<p class="about-lede">I’m Siva. Research analyst at Zoho — anomaly detection, and small models for tool-calling agents.</p>
 
 <div class="career-map">
   <svg class="career-route" viewBox="0 0 400 580" preserveAspectRatio="none" aria-hidden="true">
@@ -29,7 +29,7 @@ format:
       <div class="career-card">
         <span class="when">2022 – present · Chennai</span>
         <strong>Zoho Corporation</strong> — Research Analyst
-        <span class="detail">Anomaly detection · DGA classification · RL for agents</span>
+        <span class="detail">Anomaly detection · DGA classification · tool-calling SLMs</span>
       </div>
     </div>
 
@@ -73,5 +73,3 @@ format:
 
 <p class="about-tools"><span class="when">Tools</span> Python · PyTorch · NumPy · Pandas · SQL · Git</p>
 ```
-
-[GitHub](https://github.com/jsivark) · [Writing](writing.qmd)

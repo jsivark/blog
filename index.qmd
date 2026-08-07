@@ -9,11 +9,9 @@ format:
 ---
 
 ::: {.eyebrow}
-Writing
+Hello
 :::
 
 # Notes on ML, systems, and what I’m still figuring out.
 
-I'm Siva. I work on ML and anomaly detection, and right now I'm learning how to train LLMs and agents with RL. I write short notes as I go.
-
-[Writing](writing.qmd) · [Projects](projects.qmd) · [About](about.qmd)
+I'm Siva. I work on machine learning at Zoho — anomaly detection on the side, and currently small models for tool-calling agents: preparing training data, fine-tuning, and checking whether the model picks the right tool and arguments. Short notes as I go.
