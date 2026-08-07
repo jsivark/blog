@@ -1,7 +1,7 @@
 /*-- scss:defaults --*/
 
-$font-family-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
-$font-family-sans-serif: "Source Serif 4", Georgia, serif;
+$font-family-serif: "Newsreader", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+$font-family-sans-serif: "Newsreader", ui-serif, Georgia, serif;
 $font-family-monospace: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
 
 $font-size-root: 18px;
@@ -50,7 +50,7 @@ $card-border-color: transparent;
   --rn-code: #e9e1d4;
   --rn-glow-a: transparent;
   --rn-glow-b: transparent;
-  --rn-brand: "Source Serif 4", Georgia, serif;
+  --rn-brand: "Newsreader", ui-serif, Georgia, serif;
 }
 
 @import "tufte-common";
