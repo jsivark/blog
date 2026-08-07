@@ -16,8 +16,9 @@ Hello
 
 # Notes on ML, systems, and what I’m still figuring out.
 
-I'm Siva. I work on ML/AI at Zoho. Prev: anomaly detection and DGA. Now: fine-tuning and RL for SLMs. Short notes as I go.
+I'm Siva. I like fiction, films, and the idea of a quieter life someday. I also like building things and learning tech, math, and physics for their own sake. Notes as I figure things out.
 
 ```{=html}
+<div id="library-quotes" class="library-quotes" hidden></div>
 <div id="library-home" class="library-home" hidden></div>
 ```

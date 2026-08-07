@@ -51,22 +51,14 @@ def main() -> None:
     for b in reading:
         assert b.get("added"), f"{b['title']} missing added"
         assert not b.get("finished")
+        assert "quote" in b
 
     # 3) days-read math
     assert days_read("2026-07-15", "2026-08-07") == 24
     assert days_read("2026-07-20", "2026-07-20") == 1
 
-    # 4) simulate finishing one book via temp yml
-    yml = (ROOT / "data" / "library.yml").read_text(encoding="utf-8")
-    finished_yml = yml.replace(
-        "page: 61\n    pages: 1105\n    added: 2026-07-15",
-        "page: 1105\n    pages: 1105\n    added: 2026-07-15\n    finished: 2026-08-07",
-    )
-    with tempfile.TemporaryDirectory() as tmp:
-        tmp_path = Path(tmp)
-        # run sync against a copy by monkeypatching via env is heavy;
-        # instead validate logic inline and a negative case with subprocess on a temp file.
-        assert "finished: 2026-08-07" in finished_yml
+    # 4) quote field round-trips (empty ok)
+    assert all(isinstance(b.get("quote"), str) for b in books)
 
     # finished book without finished date must fail sync — write temp and invoke parser bits
     bad = ROOT / "data" / "_library_bad_test.yml"
@@ -105,11 +97,13 @@ books:
         if bad.exists():
             bad.unlink()
 
-    # 5) JS contains empty copy + date helpers
+    # 5) JS contains quote + empty copy helpers
     js = (ROOT / "styles" / "library.js").read_text(encoding="utf-8")
     assert "Yet to be added." in js
     assert "daysRead" in js
     assert "Added " in js
+    assert "library-quotes" in js
+    assert "book-quote" in js
 
     # 6) render site
     env = {**dict(**{k: v for k, v in __import__("os").environ.items()})}
@@ -123,12 +117,14 @@ books:
     scripts = (ROOT / "styles" / "library-scripts.html").read_text(encoding="utf-8")
 
     assert 'id="library-home"' in idx
+    assert 'id="library-quotes"' in idx
     assert 'id="library-page"' not in idx
     assert 'id="library-page"' in lib
     assert "?v=" in scripts
     assert re.search(r"library-data\.js\?v=[a-f0-9]+", idx)
     assert '"page": 1105' in data_js and '"finished": "2026-08-07"' in data_js
     assert '"page": 41' in data_js and '"added": "2026-07-20"' in data_js
+    assert '"quote": ""' in data_js
 
     # 7) simulate finished payload formatting expectations
     assert days_read("2026-07-15", "2026-08-07") == 24

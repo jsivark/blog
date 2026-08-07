@@ -13,6 +13,11 @@
     return { page, pages, pct, done };
   }
 
+  function bookQuote(book) {
+    const q = typeof book.quote === "string" ? book.quote.trim() : "";
+    return q || "";
+  }
+
   function parseISODate(value) {
     if (!value || typeof value !== "string") return null;
     const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value.trim());
@@ -52,6 +57,20 @@
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
+  }
+
+  function quoteBlock(book, { showSource = false } = {}) {
+    const q = bookQuote(book);
+    if (!q) return "";
+    const source = showSource
+      ? `<footer>— ${escapeHtml(book.title)}</footer>`
+      : "";
+    return `
+      <blockquote class="book-quote">
+        <p>“${escapeHtml(q)}”</p>
+        ${source}
+      </blockquote>
+    `;
   }
 
   function readingCard(book) {
@@ -98,10 +117,24 @@
             <strong class="lib-title">${escapeHtml(book.title)}</strong>
             ${author}
             ${meta}
+            ${quoteBlock(book)}
           </div>
         </div>
       </article>
     `;
+  }
+
+  function renderHomeQuotes(el) {
+    const quotes = data.books.filter((b) => !progress(b).done && bookQuote(b));
+    if (!quotes.length) {
+      el.hidden = true;
+      el.innerHTML = "";
+      return;
+    }
+    el.hidden = false;
+    el.innerHTML = quotes
+      .map((b) => quoteBlock(b, { showSource: true }))
+      .join("");
   }
 
   function renderHome(el) {
@@ -150,6 +183,9 @@
       })
       .join("");
   }
+
+  const homeQuotes = document.getElementById("library-quotes");
+  if (homeQuotes) renderHomeQuotes(homeQuotes);
 
   const home = document.getElementById("library-home");
   if (home) renderHome(home);

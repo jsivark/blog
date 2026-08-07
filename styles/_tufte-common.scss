@@ -320,6 +320,11 @@ body.landing {
     line-height: 2rem;
   }
 
+  .library-quotes {
+    max-width: 34rem;
+    margin-top: 2rem;
+  }
+
   .library-home {
     max-width: 28rem;
     margin-top: 2.75rem;
@@ -337,6 +342,39 @@ body.landing {
     text-transform: uppercase;
   }
 
+}
+
+.book-quote {
+  margin: 0.85rem 0 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+
+  p {
+    margin: 0;
+    font-family: "et-book-roman-old-style", et-book, Palatino, Georgia, serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.65;
+    color: var(--rn-ink);
+  }
+
+  footer {
+    margin-top: 0.45rem;
+    font-family: et-book, Palatino, Georgia, serif;
+    font-size: 0.9rem;
+    font-style: normal;
+    color: var(--rn-muted);
+  }
+}
+
+body.landing .book-quote {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+body.library-page .book-quote p {
+  font-size: 1.05rem;
 }
 
 /* Shared library book rows + progress bars */

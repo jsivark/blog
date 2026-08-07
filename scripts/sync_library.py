@@ -89,6 +89,9 @@ def main() -> None:
             )
             sys.exit(1)
 
+        quote_raw = raw.get("quote")
+        quote = "" if quote_raw is None else str(quote_raw).strip()
+
         cleaned.append(
             {
                 "title": title,
@@ -98,6 +101,7 @@ def main() -> None:
                 "pages": pages,
                 "added": added,
                 "finished": finished,
+                "quote": quote,
             }
         )
 

@@ -8,7 +8,8 @@ window.LIBRARY = {
       "page": 1105,
       "pages": 1105,
       "added": "2026-07-15",
-      "finished": "2026-08-07"
+      "finished": "2026-08-07",
+      "quote": ""
     },
     {
       "title": "The Count of Monte Cristo",
@@ -17,7 +18,8 @@ window.LIBRARY = {
       "page": 41,
       "pages": 1566,
       "added": "2026-07-20",
-      "finished": null
+      "finished": null,
+      "quote": ""
     }
   ]
 };

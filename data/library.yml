@@ -3,17 +3,20 @@
 # page / pages → progress %. When page >= pages, the book moves to Library under its category.
 # added:    YYYY-MM-DD  when you started / added it
 # finished: YYYY-MM-DD  set when done (used for “days read”)
+# quote:    optional line you liked. Shown on Home while reading; stays with the book on Library when finished.
+#           leave empty or omit if none.
 #
-# fields: title, author (optional), category, page, pages, added, finished (optional)
+# fields: title, author (optional), category, page, pages, added, finished (optional), quote (optional)
 
 books:
   - title: "Computer Systems: A Programmer's Perspective"
     author: "Bryant & O'Hallaron"
     category: systems
-    page: 61
+    page: 1105
     pages: 1105
     added: 2026-07-15
     finished: 2026-08-07
+    quote: ""
 
   - title: "The Count of Monte Cristo"
     author: "Alexandre Dumas"
@@ -21,3 +24,4 @@ books:
     page: 41
     pages: 1566
     added: 2026-07-20
+    quote: ""
