@@ -1,5 +1,5 @@
 (() => {
-  const buttons = Array.from(document.querySelectorAll("[data-filter]"));
+  const buttons = Array.from(document.querySelectorAll(".filters [data-filter]"));
   const status = document.querySelector("#filter-status");
   const valid = new Set(["technical", "notes", "personal"]);
 
@@ -31,12 +31,13 @@
     const visible = items.filter((post) => kindOf(post) === filter);
 
     items.forEach((post) => {
-      post.hidden = true;
-      post.removeAttribute("data-side");
+      const show = visible.includes(post);
+      post.hidden = !show;
+      post.classList.toggle("is-filtered-out", !show);
+      if (!show) post.removeAttribute("data-side");
     });
 
     visible.forEach((post, index) => {
-      post.hidden = false;
       post.dataset.side = index % 2 === 0 ? "left" : "right";
     });
 

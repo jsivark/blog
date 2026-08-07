@@ -287,10 +287,12 @@ body.landing {
 /* Writing — filters + zigzag timeline */
 .filters {
   display: inline-flex;
+  flex-wrap: wrap;
   gap: 4px;
   padding: 4px;
   border: 1px solid var(--rn-rule);
   border-radius: 999px;
+  max-width: 100%;
 }
 
 .filter-button {
@@ -336,15 +338,20 @@ body.writing-page {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    gap: 1.5rem;
+    gap: 1rem;
     margin: 2rem 0 0.75rem;
     border: 0;
+    flex-wrap: wrap;
   }
 
   .writing-toolbar h2 {
     margin: 0;
     border: 0;
     padding: 0;
+  }
+
+  .writing-toolbar .filters {
+    flex: 0 0 auto;
   }
 
   // Kill Quarto's default listing row/grid so the spine can work
@@ -390,6 +397,12 @@ body.writing-page {
     margin: 0 !important;
     background: transparent !important;
     box-shadow: none !important;
+  }
+
+  // Must beat display:flex !important above, or filters can't hide posts
+  .quarto-listing .quarto-post[hidden],
+  .quarto-listing .quarto-post.is-filtered-out {
+    display: none !important;
   }
 
   .quarto-listing .quarto-post .thumbnail {
