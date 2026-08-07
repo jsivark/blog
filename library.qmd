@@ -15,6 +15,6 @@ format:
 ```{=html}
 <p class="eyebrow">Books</p>
 <h1>Library</h1>
-<p class="library-lede">What I’m reading, and what I’ve finished.</p>
+<p class="library-lede">Finished books, by kind.</p>
 <div id="library-page"></div>
 ```

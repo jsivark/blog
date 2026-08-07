@@ -300,20 +300,6 @@ body.landing {
     text-transform: uppercase;
   }
 
-  .library-home .lib-more {
-    margin: 0.85rem 0 0;
-    font-size: 0.88rem;
-
-    a {
-      color: var(--rn-muted);
-      text-decoration: none;
-      border-bottom: 1px solid var(--rn-rule);
-
-      &:hover {
-        color: var(--rn-ink);
-      }
-    }
-  }
 }
 
 /* Shared library book rows + progress bars */
@@ -447,24 +433,8 @@ body.library-page {
     font-size: 1.05rem;
   }
 
-  .lib-section {
-    margin: 0 0 2.5rem;
-
-    h2 {
-      margin: 0 0 1rem;
-      padding: 0;
-      border: 0;
-      font-family: ui-sans-serif, system-ui, sans-serif;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--rn-muted);
-    }
-  }
-
   .lib-cat-group {
-    margin: 0 0 1.75rem;
+    margin: 0 0 2rem;
 
     h3 {
       margin: 0 0 0.75rem;
@@ -478,18 +448,12 @@ body.library-page {
     }
   }
 
-  .lib-hint {
-    margin: 0.5rem 0 0;
-    color: var(--rn-muted);
-    font-size: 0.82rem;
-
-    code {
-      font-size: 0.78em;
-    }
+  .lib-book.is-finished .lib-title {
+    font-size: 1rem;
   }
 
   .lib-stack {
-    gap: 1.25rem;
+    gap: 0.85rem;
   }
 }
 

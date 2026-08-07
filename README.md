@@ -42,7 +42,7 @@ pip install pyyaml   # once
 python3 scripts/sync_library.py
 ```
 
-Progress is `page / pages`. At 100% the book moves to **Read** under its category on the Library page. Home shows a small currently-reading strip.
+Progress is `page / pages`. Home shows currently-reading bars. At 100% a book leaves the home strip and appears on **Library** under its category.
 
 ## Preview
 
