@@ -23,11 +23,33 @@ Useful bits:
 Copy `templates/project.md` into `projects.qmd` (newest first). Each entry has title,
 date/tags, tagline, blurb, and links. The TOC builds from the `###` headings.
 
+## Library (currently reading)
+
+Edit `data/library.yml`:
+
+```yaml
+- title: "Book title"
+  author: "Author"
+  category: systems   # any label you like
+  page: 120           # where you are
+  pages: 1120         # total in your edition
+```
+
+Then sync (CI does this on publish too):
+
+```bash
+pip install pyyaml   # once
+python3 scripts/sync_library.py
+```
+
+Progress is `page / pages`. At 100% the book moves to **Read** under its category on the Library page. Home shows a small currently-reading strip.
+
 ## Preview
 
 ```bash
 export PATH="$HOME/workspace/.tools/quarto/bin:$PATH"
 cd ~/workspace/github.com/blog
+python3 scripts/sync_library.py
 quarto preview
 ```
 

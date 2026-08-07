@@ -1,0 +1,20 @@
+---
+title: Library
+toc: false
+page-layout: full
+format:
+  html:
+    body-classes: "library-page"
+    title-block-style: none
+    include-after-body:
+      - text: |
+          <script src="styles/library-data.js"></script>
+          <script src="styles/library.js"></script>
+---
+
+```{=html}
+<p class="eyebrow">Books</p>
+<h1>Library</h1>
+<p class="library-lede">What I’m reading, and what I’ve finished.</p>
+<div id="library-page"></div>
+```

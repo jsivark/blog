@@ -7,6 +7,8 @@ project:
     - "!templates/**"
   resources:
     - styles/writing-filters.js
+    - styles/library-data.js
+    - styles/library.js
 
 website:
   title: "Siva"
@@ -22,6 +24,8 @@ website:
         href: writing.qmd
       - text: Projects
         href: projects.qmd
+      - text: Library
+        href: library.qmd
       - text: About
         href: about.qmd
     right:

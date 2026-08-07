@@ -6,6 +6,10 @@ format:
   html:
     body-classes: "landing"
     title-block-style: none
+    include-after-body:
+      - text: |
+          <script src="styles/library-data.js"></script>
+          <script src="styles/library.js"></script>
 ---
 
 ::: {.eyebrow}
@@ -14,4 +18,8 @@ Hello
 
 # Notes on ML, systems, and what I’m still figuring out.
 
-I'm Siva. I work on machine learning at Zoho — anomaly detection on the side, and currently small models for tool-calling agents: preparing training data, fine-tuning, and checking whether the model picks the right tool and arguments. Short notes as I go.
+I'm Siva. I work on ML/AI at Zoho. Prev: anomaly detection and DGA. Now: fine-tuning and RL for SLMs. Short notes as I go.
+
+```{=html}
+<div id="library-home" class="library-home" hidden></div>
+```
