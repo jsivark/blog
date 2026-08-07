@@ -30,10 +30,12 @@
     const visible = items.filter((post) => kindOf(post) === filter);
 
     items.forEach((post) => {
-      post.hidden = !visible.includes(post);
+      post.hidden = true;
+      post.removeAttribute("data-side");
     });
 
     visible.forEach((post, index) => {
+      post.hidden = false;
       post.dataset.side = index % 2 === 0 ? "left" : "right";
     });
 
@@ -60,5 +62,8 @@
   } else {
     start();
   }
-  window.addEventListener("load", () => applyFilter(filterFromHash()));
+  // Re-apply after Quarto listing scripts finish
+  window.addEventListener("load", start);
+  setTimeout(start, 50);
+  setTimeout(start, 250);
 })();

@@ -347,65 +347,92 @@ body.writing-page {
     padding: 0;
   }
 
+  // Kill Quarto's default listing row/grid so the spine can work
+  .quarto-listing,
+  .quarto-listing-container-default,
+  .quarto-listing .list {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+
   .quarto-listing .list {
     position: relative;
-    padding: 0.35rem 0 0;
+    padding: 0.35rem 0 2rem;
     margin: 0;
   }
 
   .quarto-listing .list::before {
     content: "";
     position: absolute;
-    top: 0.75rem;
-    bottom: 1.5rem;
+    top: 0.5rem;
+    bottom: 1.25rem;
     left: 50%;
     width: 1px;
     background: var(--rn-rule);
     transform: translateX(-50%);
+    z-index: 0;
   }
 
-  .quarto-listing .quarto-post {
+  .quarto-listing .quarto-post,
+  .quarto-listing .quarto-post.image-right,
+  .quarto-listing .quarto-post.image-left {
     position: relative;
-    display: flex;
-    width: 50%;
-    min-height: 3.5rem;
-    flex-direction: column;
-    gap: 0.15rem;
+    display: flex !important;
+    width: 50% !important;
+    min-height: 3.75rem;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start;
+    gap: 0.2rem !important;
     border: 0 !important;
-    padding: 0 0 1.35rem !important;
+    padding: 0 0 1.5rem !important;
     margin: 0 !important;
     background: transparent !important;
+    box-shadow: none !important;
   }
 
-  .quarto-listing .quarto-post .metadata { order: -1; }
-  .quarto-listing .quarto-post .body { order: 1; }
+  .quarto-listing .quarto-post .thumbnail {
+    display: none !important;
+  }
+
+  .quarto-listing .quarto-post .metadata { order: -1 !important; }
+  .quarto-listing .quarto-post .body { order: 1 !important; }
 
   .quarto-listing .quarto-post .body,
   .quarto-listing .quarto-post .metadata {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
   }
 
+  // Fallback before JS sets data-side (DOM order)
+  .quarto-listing .quarto-post:not([data-side]):nth-child(odd),
   .quarto-listing .quarto-post[data-side="left"] {
-    align-items: flex-end;
+    align-items: flex-end !important;
     margin-right: 50% !important;
-    padding-right: 2rem !important;
+    margin-left: 0 !important;
+    padding-right: 2.1rem !important;
+    padding-left: 0 !important;
     text-align: right;
   }
 
+  .quarto-listing .quarto-post:not([data-side]):nth-child(even),
   .quarto-listing .quarto-post[data-side="right"] {
-    align-items: flex-start;
+    align-items: flex-start !important;
     margin-left: 50% !important;
-    padding-left: 2rem !important;
+    margin-right: 0 !important;
+    padding-left: 2.1rem !important;
+    padding-right: 0 !important;
     text-align: left;
   }
 
   .quarto-listing .quarto-post::before {
     content: "";
     position: absolute;
-    top: 0.35rem;
-    z-index: 1;
+    top: 0.4rem;
+    z-index: 2;
     width: 10px;
     height: 10px;
     border: 2px solid var(--rn-paper);
@@ -417,16 +444,21 @@ body.writing-page {
   .quarto-listing .quarto-post::after {
     content: "";
     position: absolute;
-    top: 0.6rem;
-    width: 1.35rem;
+    top: 0.65rem;
+    z-index: 1;
+    width: 1.45rem;
     height: 1px;
     background: var(--rn-rule);
   }
 
-  .quarto-listing .quarto-post[data-side="left"]::before { right: -5px; }
-  .quarto-listing .quarto-post[data-side="left"]::after { right: 0.4rem; }
-  .quarto-listing .quarto-post[data-side="right"]::before { left: -5px; }
-  .quarto-listing .quarto-post[data-side="right"]::after { left: 0.4rem; }
+  .quarto-listing .quarto-post:not([data-side]):nth-child(odd)::before,
+  .quarto-listing .quarto-post[data-side="left"]::before { right: -5px; left: auto; }
+  .quarto-listing .quarto-post:not([data-side]):nth-child(odd)::after,
+  .quarto-listing .quarto-post[data-side="left"]::after { right: 0.45rem; left: auto; }
+  .quarto-listing .quarto-post:not([data-side]):nth-child(even)::before,
+  .quarto-listing .quarto-post[data-side="right"]::before { left: -5px; right: auto; }
+  .quarto-listing .quarto-post:not([data-side]):nth-child(even)::after,
+  .quarto-listing .quarto-post[data-side="right"]::after { left: 0.45rem; right: auto; }
 
   .listing-title {
     font-family: var(--rn-brand);
