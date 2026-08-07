@@ -1,15 +1,35 @@
 ---
 title: "Projects"
-toc: true
-toc-title: "Contents"
-page-layout: article
+toc: false
+page-layout: full
 format:
   html:
     body-classes: "projects-page"
+    title-block-style: none
 ---
 
-Things I build in the open.
+```{=html}
+<p class="eyebrow">Build</p>
+<h1>Projects</h1>
+<p class="projects-lede">Things I build in the open. Nothing listed yet.</p>
+```
 
-*Nothing here yet.*
+<!--
+When you have something worth linking, paste blocks from templates/project.md below.
 
-<!-- Paste blocks from templates/project.md below. Newest first. -->
+### Project name
+
+::: {.project-meta}
+Month Year · Language · Topic
+:::
+
+::: {.project-tagline}
+One-line pitch.
+:::
+
+Short paragraph.
+
+::: {.project-links}
+[GitHub](https://github.com/jsivark/repo)
+:::
+-->

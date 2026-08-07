@@ -700,20 +700,50 @@ body.about-page {
   }
 }
 
-/* Projects page — ekzhang-like entries, Tufte chrome */
+/* Projects page — empty state + ekzhang-like entries later */
 body.projects-page {
   #title-block-header {
-    margin-bottom: 1.25rem;
+    display: none;
   }
 
-  main.content > p:first-of-type {
-    max-width: 36rem;
+  #quarto-margin-sidebar {
+    display: none !important;
+  }
+
+  main.content {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding-top: 2.75rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 1rem;
     color: var(--rn-muted);
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  main.content > h1 {
+    margin: 0 0 1rem;
+    font-family: var(--rn-brand);
+    font-weight: 400;
+    font-size: clamp(2.2rem, 5vw, 3.25rem);
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+  }
+
+  .projects-lede {
+    max-width: 32rem;
+    color: var(--rn-muted);
+    font-size: 1.05rem;
   }
 
   main.content > h3 {
     font-family: var(--rn-brand);
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1.45rem;
     letter-spacing: -0.02em;
     margin-top: 2.75rem;
@@ -722,7 +752,6 @@ body.projects-page {
     border-top: 1px solid var(--rn-rule);
   }
 
-  // First project heading: softer top rule (intro already separates)
   main.content > h3:first-of-type {
     margin-top: 2rem;
   }
