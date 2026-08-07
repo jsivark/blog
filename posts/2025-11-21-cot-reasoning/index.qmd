@@ -3,7 +3,7 @@ title: "Beyond the Prompt: CoT Paths and Premise Ordering"
 description: "Paper notes on CoT-decoding and how premise order affects LLM reasoning"
 author: "Siva"
 date: 2025-11-21
-categories: [llm, paper-notes]
+categories: [notes, llm, paper-notes]
 ---
 
 ### Introduction

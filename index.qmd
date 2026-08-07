@@ -1,12 +1,19 @@
 ---
-title: "Siva"
+title: "Home"
 toc: false
 page-layout: full
 format:
   html:
     body-classes: "landing"
+    title-block-style: none
 ---
 
-I'm learning machine learning, math, and systems — and writing down what sticks.
+::: {.eyebrow}
+Writing
+:::
 
-[Writing](writing.qmd) · [Projects](projects.qmd) · [GitHub](https://github.com/jsivark)
+# Notes on ML, systems, and what I’m still figuring out.
+
+I'm Siva. I work on ML and anomaly detection, and right now I'm learning how to train LLMs and agents with RL. I write short notes as I go.
+
+[Writing](writing.qmd) · [Projects](projects.qmd) · [About](about.qmd)

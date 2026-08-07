@@ -1,8 +1,9 @@
 ---
 title: "Post title"
-description: "One-line summary for the Writing page"
+description: "One-line summary"
 author: "Siva"
 date: 2026-01-01
+categories: [technical]
 draft: true
 ---
 

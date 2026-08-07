@@ -2,8 +2,38 @@
 title: About
 toc: false
 page-layout: full
+format:
+  html:
+    body-classes: "about-page"
 ---
 
-I'm **Siva**.
+I'm **Siva**. Research analyst at Zoho, working on anomaly detection and (lately) RL for LLM agents.
 
-I keep notes here while learning ML, math, and systems. Code lives on [GitHub](https://github.com/jsivark).
+::: {.resume-block}
+
+## Now
+
+- Research Analyst, Zoho Corporation — anomaly detection, DGA classification, RL for agents  
+  <span class="when">2022 – present · Chennai</span>
+
+## Before
+
+- RPA / Power BI POCs  
+  <span class="when">2021 · Chennai</span>
+- Technical Assistant, Anna University — spectroscopy lab support  
+  <span class="when">2019 – 2021</span>
+
+## Education
+
+- M.Sc. Physics, RKM Vivekananda College (Univ. of Madras)  
+  <span class="when">2017 – 2019</span>
+- B.Sc. Physics, RKM Vivekananda College (Univ. of Madras)  
+  <span class="when">2014 – 2017</span>
+
+## Tools
+
+Python, PyTorch, NumPy, Pandas, SQL, Git
+
+:::
+
+[GitHub](https://github.com/jsivark) · [Writing](writing.qmd)

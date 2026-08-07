@@ -1,15 +1,37 @@
 ---
 title: "Writing"
 listing:
+  id: posts
   contents: posts
   sort: "date desc"
   type: default
   categories: false
   sort-ui: false
   filter-ui: false
-  fields: [date, title, description]
-  page-size: 20
+  fields: [date, title, categories]
+  page-size: 50
   feed: true
 page-layout: full
 toc: false
+format:
+  html:
+    body-classes: "writing-page"
+    include-after-body:
+      - text: |
+          <script src="styles/writing-filters.js"></script>
 ---
+
+::: {.writing-toolbar}
+## Posts
+
+::: {.filters}
+<button class="filter-button" type="button" data-filter="technical" aria-pressed="true">Technical</button>
+<button class="filter-button" type="button" data-filter="notes" aria-pressed="false">Notes</button>
+:::
+:::
+
+::: {#filter-status .filter-status}
+:::
+
+::: {#posts}
+:::

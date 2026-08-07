@@ -5,9 +5,11 @@ project:
     - "*.qmd"
     - "posts/**/*.qmd"
     - "!templates/**"
+  resources:
+    - styles/writing-filters.js
 
 website:
-  title: "Random Notes"
+  title: "Siva"
   site-url: https://jsivark.github.io/blog
   favicon: assets/minions.png
   repo-url: https://github.com/jsivark/blog
@@ -27,7 +29,7 @@ website:
         href: https://github.com/jsivark
         aria-label: GitHub
   page-footer:
-    center: "Random Notes"
+    center: "Siva"
   search: false
 
 format:

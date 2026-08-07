@@ -1,55 +1,56 @@
 /*-- scss:defaults --*/
 
-$font-family-serif: "Source Serif 4", "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
+$font-family-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
 $font-family-sans-serif: "Source Serif 4", Georgia, serif;
 $font-family-monospace: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
 
-$font-size-root: 19px;
+$font-size-root: 18px;
 $line-height-base: 1.65;
 
-$body-bg: #faf7f2;
-$body-color: #1c1917;
-$link-color: #0f4c5c;
-$link-hover-color: #092f38;
+$body-bg: #f3eee4;
+$body-color: #26221d;
+$link-color: #5f5142;
+$link-hover-color: #26221d;
 
-$primary: #0f4c5c;
-$secondary: #57534e;
-$light: #faf7f2;
-$dark: #1c1917;
+$primary: #5f5142;
+$secondary: #756d62;
+$light: #f3eee4;
+$dark: #26221d;
 
-$headings-font-weight: 600;
-$headings-color: #1c1917;
+$headings-font-weight: 500;
+$headings-color: #26221d;
 
-$code-color: #1c1917;
-$code-bg: #efeae2;
-$pre-bg: #efeae2;
+$code-color: #26221d;
+$code-bg: #e9e1d4;
+$pre-bg: #e9e1d4;
 
 $navbar-bg: transparent;
-$navbar-fg: #1c1917;
+$navbar-fg: #26221d;
 $footer-bg: transparent;
-$footer-fg: #57534e;
+$footer-fg: #756d62;
 
-$toc-color: #57534e;
+$toc-color: #756d62;
 $toc-font-size: 0.85rem;
-$toc-active-border: #c2410c;
+$toc-active-border: #5f5142;
 
-$border-color: #e7e0d5;
+$border-color: #d6cdbd;
 $card-border-color: transparent;
 
 /*-- scss:rules --*/
 
 :root {
-  --rn-paper: #faf7f2;
-  --rn-ink: #1c1917;
-  --rn-muted: #57534e;
-  --rn-rule: #e7e0d5;
-  --rn-accent: #c2410c;
-  --rn-link: #0f4c5c;
-  --rn-link-hover: #092f38;
-  --rn-code: #efeae2;
-  --rn-glow-a: #fffdf8;
-  --rn-glow-b: #f3eee4;
-  --rn-brand: "Syne", "Source Serif 4", sans-serif;
+  --rn-paper: #f3eee4;
+  --rn-ink: #26221d;
+  --rn-muted: #756d62;
+  --rn-rule: #d6cdbd;
+  --rn-soft: #e9e1d4;
+  --rn-accent: #5f5142;
+  --rn-link: #5f5142;
+  --rn-link-hover: #26221d;
+  --rn-code: #e9e1d4;
+  --rn-glow-a: transparent;
+  --rn-glow-b: transparent;
+  --rn-brand: "Source Serif 4", Georgia, serif;
 }
 
 @import "tufte-common";
