@@ -92,7 +92,7 @@
 
     const cats = [...doneByCat.keys()].sort((a, b) => a.localeCompare(b));
     if (!cats.length) {
-      el.innerHTML = `<p class="lib-empty">Nothing finished yet.</p>`;
+      el.innerHTML = "";
       return;
     }
 

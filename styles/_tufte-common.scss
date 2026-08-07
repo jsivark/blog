@@ -426,11 +426,8 @@ body.library-page {
     line-height: 1.1;
   }
 
-  .library-lede {
-    max-width: 30rem;
-    margin: 0 0 2rem;
-    color: var(--rn-muted);
-    font-size: 1.05rem;
+  #library-page {
+    margin-top: 2rem;
   }
 
   .lib-cat-group {

@@ -9,6 +9,7 @@ project:
     - styles/writing-filters.js
     - styles/library-data.js
     - styles/library.js
+    - styles/library-scripts.html
 
 website:
   title: "Siva"

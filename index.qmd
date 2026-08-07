@@ -7,9 +7,7 @@ format:
     body-classes: "landing"
     title-block-style: none
     include-after-body:
-      - text: |
-          <script src="styles/library-data.js"></script>
-          <script src="styles/library.js"></script>
+      - styles/library-scripts.html
 ---
 
 ::: {.eyebrow}

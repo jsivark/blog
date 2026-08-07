@@ -44,6 +44,8 @@ python3 scripts/sync_library.py
 
 Progress is `page / pages`. Home shows currently-reading bars. At 100% a book leaves the home strip and appears on **Library** under its category.
 
+`sync_library.py` also writes cache-busted script tags (`?v=…`) so browsers pick up new page numbers after publish without a hard refresh.
+
 ## Preview
 
 ```bash

@@ -7,14 +7,11 @@ format:
     body-classes: "library-page"
     title-block-style: none
     include-after-body:
-      - text: |
-          <script src="styles/library-data.js"></script>
-          <script src="styles/library.js"></script>
+      - styles/library-scripts.html
 ---
 
 ```{=html}
 <p class="eyebrow">Books</p>
 <h1>Library</h1>
-<p class="library-lede">Finished books, by kind.</p>
 <div id="library-page"></div>
 ```
