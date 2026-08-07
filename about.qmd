@@ -14,14 +14,13 @@ format:
 <p class="about-lede">I’m Siva. Research analyst at Zoho — anomaly detection, and lately RL for LLM agents.</p>
 
 <div class="career-map">
-  <svg class="career-route" viewBox="0 0 400 720" preserveAspectRatio="none" aria-hidden="true">
+  <svg class="career-route" viewBox="0 0 400 580" preserveAspectRatio="none" aria-hidden="true">
     <path class="career-route-line" d="M200 24
       C 200 70, 110 90, 110 140
       S 290 190, 290 250
       S 110 310, 110 370
       S 290 430, 290 490
-      S 200 550, 200 610
-      S 200 680, 200 700" />
+      S 200 540, 200 560" />
   </svg>
 
   <div class="career-stops">
@@ -62,23 +61,17 @@ format:
     </div>
 
     <div class="career-stop turn-left">
-      <div class="career-node" aria-hidden="true"></div>
+      <div class="career-node career-node-end" aria-hidden="true"></div>
       <div class="career-card">
         <span class="when">2014 – 2017</span>
         <strong>B.Sc. Physics</strong>
         <span class="detail">RKM Vivekananda College · Univ. of Madras</span>
       </div>
     </div>
-
-    <div class="career-stop turn-center">
-      <div class="career-node career-node-end" aria-hidden="true"></div>
-      <div class="career-card">
-        <span class="when">Tools</span>
-        <span class="detail">Python · PyTorch · NumPy · Pandas · SQL · Git</span>
-      </div>
-    </div>
   </div>
 </div>
+
+<p class="about-tools"><span class="when">Tools</span> Python · PyTorch · NumPy · Pandas · SQL · Git</p>
 ```
 
 [GitHub](https://github.com/jsivark) · [Writing](writing.qmd)

@@ -569,8 +569,26 @@ body.about-page {
 
   .career-map {
     position: relative;
-    margin: 2.75rem 0 2rem;
-    min-height: 40rem;
+    margin: 2.75rem 0 1.5rem;
+    min-height: 34rem;
+  }
+
+  .about-tools {
+    max-width: 34rem;
+    margin: 0 0 1.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rn-rule);
+    color: var(--rn-muted);
+    font-size: 0.95rem;
+
+    .when {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.02em;
+      color: var(--rn-muted);
+    }
   }
 
   .career-route {
@@ -663,18 +681,6 @@ body.about-page {
     text-align: left;
   }
 
-  .career-stop.turn-center .career-card {
-    grid-column: 1 / -1;
-    justify-self: center;
-    text-align: center;
-    max-width: 22rem;
-    margin-top: 0.35rem;
-  }
-
-  .career-stop.turn-center .career-node {
-    grid-column: 2;
-  }
-
   @media (max-width: 700px) {
     .career-route {
       display: none;
@@ -690,8 +696,7 @@ body.about-page {
     }
 
     .career-stop.turn-left .career-card,
-    .career-stop.turn-right .career-card,
-    .career-stop.turn-center .career-card {
+    .career-stop.turn-right .career-card {
       grid-column: 2;
       justify-self: start;
       text-align: left;
