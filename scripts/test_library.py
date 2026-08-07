@@ -43,8 +43,11 @@ def main() -> None:
     # 2) current books: reading, have added, not finished
     reading = [b for b in books if b["page"] < b["pages"]]
     done = [b for b in books if b["page"] >= b["pages"]]
-    assert len(reading) == 2, reading
-    assert len(done) == 0
+    assert len(reading) == 1, reading
+    assert len(done) == 1, done
+    assert done[0]["title"].startswith("Computer Systems")
+    assert done[0]["added"] == "2026-07-15"
+    assert done[0]["finished"] == "2026-08-07"
     for b in reading:
         assert b.get("added"), f"{b['title']} missing added"
         assert not b.get("finished")
@@ -124,7 +127,7 @@ books:
     assert 'id="library-page"' in lib
     assert "?v=" in scripts
     assert re.search(r"library-data\.js\?v=[a-f0-9]+", idx)
-    assert '"page": 61' in data_js and '"added": "2026-07-15"' in data_js
+    assert '"page": 1105' in data_js and '"finished": "2026-08-07"' in data_js
     assert '"page": 41' in data_js and '"added": "2026-07-20"' in data_js
 
     # 7) simulate finished payload formatting expectations
