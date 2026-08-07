@@ -5,10 +5,10 @@ window.LIBRARY = {
       "title": "Computer Systems: A Programmer's Perspective",
       "author": "Bryant & O'Hallaron",
       "category": "systems",
-      "page": 61,
+      "page": 1105,
       "pages": 1105,
       "added": "2026-07-15",
-      "finished": null
+      "finished": "2026-08-07"
     },
     {
       "title": "The Count of Monte Cristo",
